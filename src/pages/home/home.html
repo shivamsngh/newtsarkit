@@ -1,14 +1,20 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="no-scroll">
+  <video #videoElement autoplay preload='auto' [width]="width" [height]="height" webkitPlaysinline></video>
 </ion-content>
+
+<!--
+<ion-content padding>
+
+  <video #videoElement width="320" height="240" loop autoplay webkitPlaysinline controls="false">
+    <!-- MP4 for Safari, IE9, iPhone, iPad, Android, and Windows Phone 7 --
+    <source type="video/mp4" src="assets/video/output_4.mp4" />
+    <!-- WebM/VP8 for Firefox4, Opera, and Chrome --
+    <source type="video/webm" src="assets/video/output_4.webm" />
+    <!-- Ogg/Vorbis for older Firefox and Opera versions --
+    <source type="video/ogg" src="assets/video/output_4.ogg" />
+    <source type="video/x-flv" src="assets/video/output_4.flv" />
+    <source type="video/3gpp" src="assets/video/output_4.3gp" />
+  </video>
+ 
+ </ion-content>
+ -->
