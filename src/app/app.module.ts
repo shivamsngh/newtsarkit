@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { AndroidPermissions } from '@ionic-native/android-permissions';
+import { Diagnostic } from '@ionic-native/diagnostic';
 import { ArengineServiceProvider } from '../providers/arengine-service/arengine-service';
 
 @NgModule({
@@ -27,7 +27,7 @@ import { ArengineServiceProvider } from '../providers/arengine-service/arengine-
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AndroidPermissions,
+    Diagnostic,
     ArengineServiceProvider
   ]
 })
