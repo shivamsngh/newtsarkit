@@ -17,7 +17,9 @@ import { ARController, ARThreeScene, artoolkit, CameraDeviceConfig } from 'jsart
 })
 export class HomePage {
 
-  @ViewChild('canvasElem') canvasElem: ElementRef;
+  // @ViewChild('canvasElem') canvasElem: ElementRef;
+
+  @ViewChild('videoElement') videoElement: ElementRef;
   // @HostListener('resize') resize() {
   //   this.engine.resize();
   // }
@@ -84,23 +86,21 @@ export class HomePage {
     let vw = this.width;
     let vh = this.height;
     //Initialize a basic camera
-    const scene = new Scene();
-    const camera = new Camera();
-    scene.add(camera);
+    // const scene = new Scene();
+    // const camera = new Camera();
+    // scene.add(camera);
 
 
     if ('MediaDevices' in window || navigator.getUserMedia) {
       const videoCofig: CameraDeviceConfig = { video: true };
 
       ARController.getUserMediaThreeScene({
-        cameraConfig: videoCofig, // added
+        // cameraConfig: videoCofig, // added
         maxARVideoSize: 640,
-        cameraParam: 'assets/data/camera_para-ip.dat',
-
+        cameraParam: 'assets/data/camera_para.dat',
         onSuccess: (arScene: ARThreeScene, arController, arCamera) => {
-          arController.setPatternDetectionMode(artoolkit.AR_MATRIX_CODE_DETECTION);
-
-          const renderer = this.createWebGLRenderer(vw, vh, arScene, arController);
+          arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
+          var renderer = this.createWebGLRenderer(vw, vh);
           document.body.appendChild(renderer.domElement);
 
           let rotationTarget = 0;
@@ -186,36 +186,51 @@ export class HomePage {
     return icosahedron;
   }
 
-  private createWebGLRenderer(width: number, height: number, arScene, arController): WebGLRenderer {
-    let ideal = Math.min(
-      window.innerWidth / arScene.video.videoWidth,
-      window.innerHeight / arScene.video.videoHeight
-    );
-    width = ideal * arScene.video.videoWidth;
-    height = ideal * arScene.video.videoHeight;
-    var renderer = new WebGLRenderer({
-      antialias: true,
-      alpha: true
-    });
+  // private createWebGLRenderer(width: number, height: number): WebGLRenderer {
+  //   let ideal = Math.min(
+  //     window.innerWidth / arScene.video.videoWidth,
+  //     window.innerHeight / arScene.video.videoHeight
+  //   );
+  //   width = ideal * arScene.video.videoWidth;
+  //   height = ideal * arScene.video.videoHeight;
+  //   var renderer = new WebGLRenderer({
+  //     antialias: true,
+  //     alpha: true
+  //   });
 
-    console.log("AR COntroller", arController);
-		if (arController.orientation === 'portrait') {
-			renderer.setSize(height,width);
-		} else {
-			renderer.setSize(width,height);
-    }
+  //   console.log("AR COntroller", arController);
+	// 	if (arController.orientation === 'portrait') {
+	// 		renderer.setSize(height,width);
+	// 	} else {
+	// 		renderer.setSize(width,height);
+  //   }
     
-    renderer.domElement.style.transformOrigin = '0 0';
-    renderer.domElement.style.transform = 'rotate(-90deg) translateX(-100%)';
-    renderer.setClearColor(new Color('lightgrey'), 0)
-    renderer.domElement.style.position = 'absolute'
-    renderer.domElement.style.top = '0px';
-    renderer.domElement.style.left = '0px';
+  //   renderer.domElement.style.transformOrigin = '0 0';
+  //   renderer.domElement.style.transform = 'rotate(-90deg) translateX(-100%)';
+  //   renderer.setClearColor(new Color('lightgrey'), 0)
+  //   renderer.domElement.style.position = 'absolute'
+  //   renderer.domElement.style.top = '0px';
+  //   renderer.domElement.style.left = '0px';
    
-    // renderer.domElement.style.transform = 'translate(-50%, -50%)';
-    // renderer.domElement.className = 'center';
+  //   // renderer.domElement.style.transform = 'translate(-50%, -50%)';
+  //   // renderer.domElement.className = 'center';
+  //   return renderer;
+  // }
+
+  private createWebGLRenderer(width: number, height: number): WebGLRenderer {
+    var renderer = new WebGLRenderer({
+        antialias: true,
+        alpha: true
+    });
+    renderer.setClearColor(new Color('lightgrey'), 0)
+    renderer.setSize(width, height);
+    renderer.domElement.style.position = 'absolute'
+    renderer.domElement.style.top = '50%';
+    renderer.domElement.style.left = '50%';
+    renderer.domElement.style.transform = 'translate(-50%, -50%)';
+    renderer.domElement.className = 'center';
     return renderer;
-  }
+}
 
 
 
