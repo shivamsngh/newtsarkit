@@ -10,7 +10,7 @@ import { Diagnostic } from '@ionic-native/diagnostic';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any;
+  rootPage: any = HomePage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
@@ -23,27 +23,27 @@ export class MyApp {
       (<any>window).MediaDevices = (<any>window).MediaDevices || navigator.getUserMedia;
       // this.checkPermissions();
     });
-    
 
-  // }
-  // private checkPermissions() {
-  //   this.diagnose.getCameraAuthorizationStatus().then(
-  //     success => {
-  //       console.log("success in camera", success);
-  //       this.diagnose.getMicrophoneAuthorizationStatus().then(done => {
-  //         console.log("mic success", done);
-  //         this.rootPage = HomePage;
-  //         return;
-  //       }, fail => {
-  //         this.diagnose.requestMicrophoneAuthorization().then(completed => {
-  //           this.checkPermissions();
-  //         });
-  //       });
-  //     }, failure => {
-  //       this.diagnose.requestCameraAuthorization().then(completed => {
-  //         this.checkPermissions();
-  //       })
-  //     });
+
+    // }
+    // private checkPermissions() {
+    //   this.diagnose.getCameraAuthorizationStatus().then(
+    //     success => {
+    //       console.log("success in camera", success);
+    //       this.diagnose.getMicrophoneAuthorizationStatus().then(done => {
+    //         console.log("mic success", done);
+    //         this.rootPage = HomePage;
+    //         return;
+    //       }, fail => {
+    //         this.diagnose.requestMicrophoneAuthorization().then(completed => {
+    //           this.checkPermissions();
+    //         });
+    //       });
+    //     }, failure => {
+    //       this.diagnose.requestCameraAuthorization().then(completed => {
+    //         this.checkPermissions();
+    //       })
+    //     });
   }
 }
 
