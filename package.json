@@ -30,10 +30,9 @@
         "@ionic/storage": "2.0.1",
         "android-camera-permission": "^1.0.0",
         "babylonjs": "^3.1.0-alpha3.6",
+        "connect": "^3.5.0",
         "cordova-android": "^6.3.0",
         "cordova-browser": "^4.1.0",
-        "cordova-plugin-camera": "^2.4.1",
-        "cordova-plugin-compat": "^1.2.0",
         "cordova-plugin-device": "^1.1.6",
         "cordova-plugin-ionic-webview": "^1.1.16",
         "cordova-plugin-splashscreen": "^4.0.3",
@@ -44,11 +43,10 @@
         "ionicons": "3.0.0",
         "jsartoolkit5": "0.0.4",
         "rxjs": "5.4.3",
+        "serve-static": "^1.11.1",
         "sw-toolbox": "3.6.0",
         "three": "^0.82.1",
-        "zone.js": "0.8.18",
-        "connect": "^3.5.0",
-        "serve-static": "^1.11.1"
+        "zone.js": "0.8.18"
     },
     "devDependencies": {
         "@ionic/app-scripts": "3.0.1",
@@ -65,7 +63,6 @@
             "cordova-plugin-device": {},
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-ionic-webview": {},
-            "cordova-plugin-camera": {},
             "android-camera-permission": {},
             "cordova.plugins.diagnostic": {}
         },
