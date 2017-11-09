@@ -12,37 +12,38 @@ import { Diagnostic } from '@ionic-native/diagnostic';
 export class MyApp {
   rootPage: any;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private diagnose: Diagnostic) {
+  constructor(platform: Platform) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide(); window.URL = window.URL || (<any>window).webkitURL;
+      // statusBar.styleDefault();
+      // splashScreen.hide(); 
+      window.URL = window.URL || (<any>window).webkitURL;
       //navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
       (<any>window).MediaDevices = (<any>window).MediaDevices || navigator.getUserMedia;
-      this.checkPermissions();
+      // this.checkPermissions();
     });
     
 
-  }
-  private checkPermissions() {
-    this.diagnose.getCameraAuthorizationStatus().then(
-      success => {
-        console.log("success in camera", success);
-        this.diagnose.getMicrophoneAuthorizationStatus().then(done => {
-          console.log("mic success", done);
-          this.rootPage = HomePage;
-          return;
-        }, fail => {
-          this.diagnose.requestMicrophoneAuthorization().then(completed => {
-            this.checkPermissions();
-          });
-        });
-      }, failure => {
-        this.diagnose.requestCameraAuthorization().then(completed => {
-          this.checkPermissions();
-        })
-      });
+  // }
+  // private checkPermissions() {
+  //   this.diagnose.getCameraAuthorizationStatus().then(
+  //     success => {
+  //       console.log("success in camera", success);
+  //       this.diagnose.getMicrophoneAuthorizationStatus().then(done => {
+  //         console.log("mic success", done);
+  //         this.rootPage = HomePage;
+  //         return;
+  //       }, fail => {
+  //         this.diagnose.requestMicrophoneAuthorization().then(completed => {
+  //           this.checkPermissions();
+  //         });
+  //       });
+  //     }, failure => {
+  //       this.diagnose.requestCameraAuthorization().then(completed => {
+  //         this.checkPermissions();
+  //       })
+  //     });
   }
 }
 
