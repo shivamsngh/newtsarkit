@@ -30,7 +30,7 @@
     "android-camera-permission": "^1.0.0",
     "babylonjs": "^3.1.0-alpha3.6",
     "cordova-android": "^6.3.0",
-    "cordova-browser": "^4.1.0",
+    "cordova-browser": "^5.0.1",
     "cordova-plugin-camera": "^2.4.1",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^1.1.6",
