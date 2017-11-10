@@ -272,9 +272,9 @@ export class HomePage {
 
         if ('MediaDevices' in window || navigator.getUserMedia) {
             console.log("dev id", this.deviceId);
-            let constraints: MediaStreamConstraints = { video: { facingMode: 'environment' } };
-            console.log("Mediascreens");
-            console.log(navigator.mediaDevices.getUserMedia(constraints));
+            // let constraints: MediaStreamConstraints = { video: { facingMode: 'environment' } };
+            // console.log("Mediascreens");
+            // console.log(navigator.mediaDevices.getUserMedia(constraints));
             this.getDeviceId().then(id => {
                 this.deviceId = id;
                 let camConfig: CameraDeviceConfig = { video: { deviceId: this.deviceId } };
@@ -345,7 +345,7 @@ export class HomePage {
             alpha: true
         });
         renderer.setClearColor(new Color('lightgrey'), 0)
-        renderer.setSize(width, height);
+        renderer.setSize(height, width);
         renderer.domElement.style.position = 'absolute'
         renderer.domElement.style.top = '50%';
         renderer.domElement.style.left = '50%';
