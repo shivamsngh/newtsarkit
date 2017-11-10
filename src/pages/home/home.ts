@@ -255,8 +255,10 @@ export class HomePage {
             console.log("cam info", info);
             let devId: string = 'unkwn';
             info.forEach(x => {
-                if (x.kind.toString() === "rear" || x.kind.toString() === "back") {
-                    devId = x.deviceId;
+                if (x.label){
+                    let labelRegEx = x.label.match(/back | rear/);
+                    if(labelRegEx!==null || labelRegEx!==undefined)
+                    devId=x.deviceId;
                 }
             });
             return devId;
@@ -269,6 +271,7 @@ export class HomePage {
         let vh = this.height;
 
         if ('MediaDevices' in window || navigator.getUserMedia) {
+            console.log("dev id", this.deviceId);
             let constraints: MediaStreamConstraints = { video: { facingMode: 'environment' } };
             let camConfig: CameraDeviceConfig = { video: { deviceId: this.deviceId } }
             console.log("Mediascreens");
