@@ -255,6 +255,7 @@ export class HomePage {
 
         if ('MediaDevices' in window || navigator.getUserMedia) {
             let constraints: MediaStreamConstraints = { video: { facingMode: 'environment' } };
+            console.log("Mediascreens");
             console.log(navigator.mediaDevices.getUserMedia(constraints));
             ARController.getUserMediaThreeScene({
                 maxARVideoSize: 640,
