@@ -247,7 +247,6 @@ export class HomePage {
         this.width = 640;//platform.width();
         this.height = 480;//platform.height();
         console.log(`WxH: ${this.width}x${this.height}`);
-        this.getDeviceId().then(id => this.deviceId = id);
     }
 
     public getDeviceId() {
@@ -255,12 +254,13 @@ export class HomePage {
             console.log("cam info", info);
             let devId: string = 'unkwn';
             info.forEach(x => {
-                if (x.label){
-                    let labelRegEx = x.label.match(/back | rear/);
-                    if(labelRegEx!==null || labelRegEx!==undefined)
-                    devId=x.deviceId;
+                if (x.label) {
+                    let labelRegEx = x.label.match(/back|rear/);
+                    if (labelRegEx !== null || labelRegEx !== undefined)
+                        devId = x.deviceId;
                 }
             });
+            console.log(devId);
             return devId;
         });
     }
@@ -273,39 +273,43 @@ export class HomePage {
         if ('MediaDevices' in window || navigator.getUserMedia) {
             console.log("dev id", this.deviceId);
             let constraints: MediaStreamConstraints = { video: { facingMode: 'environment' } };
-            let camConfig: CameraDeviceConfig = { video: { deviceId: this.deviceId } }
             console.log("Mediascreens");
             console.log(navigator.mediaDevices.getUserMedia(constraints));
-            ARController.getUserMediaThreeScene({
-                maxARVideoSize: 640,
-                cameraConfig: camConfig,
-                cameraParam: 'assets/data/camera_para.dat',
-                onSuccess: (arScene: ARThreeScene, arController, arCamera) => {
-                    arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
+            this.getDeviceId().then(id => {
+                this.deviceId = id;
+                let camConfig: CameraDeviceConfig = { video: { deviceId: this.deviceId } };
+                ARController.getUserMediaThreeScene({
+                    maxARVideoSize: 640,
+                    cameraConfig: camConfig,
+                    cameraParam: 'assets/data/camera_para.dat',
+                    onSuccess: (arScene: ARThreeScene, arController, arCamera) => {
+                        arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
 
-                    var renderer = this.createWebGLRenderer(vw, vh);
-                    document.body.appendChild(renderer.domElement);
+                        var renderer = this.createWebGLRenderer(vw, vh);
+                        document.body.appendChild(renderer.domElement);
 
-                    var rotationTarget = 0;
-                    renderer.domElement.addEventListener('click', function (ev) {
-                        ev.preventDefault();
-                        rotationTarget += 1;
-                    }, false);
+                        var rotationTarget = 0;
+                        renderer.domElement.addEventListener('click', function (ev) {
+                            ev.preventDefault();
+                            rotationTarget += 1;
+                        }, false);
 
 
-                    let cube = this.createCube();
-                    let icosahedron = this.createIcosahedron();
-                    this.trackMarker(arScene, arController, 5, cube);
-                    this.trackMarker(arScene, arController, 20, icosahedron);
+                        let cube = this.createCube();
+                        let icosahedron = this.createIcosahedron();
+                        this.trackMarker(arScene, arController, 5, cube);
+                        this.trackMarker(arScene, arController, 20, icosahedron);
 
-                    let tick = () => {
-                        arScene.process();
-                        arScene.renderOn(renderer);
-                        requestAnimationFrame(tick);
-                    };
-                    tick();
-                }
-            });
+                        let tick = () => {
+                            arScene.process();
+                            arScene.renderOn(renderer);
+                            requestAnimationFrame(tick);
+                        };
+                        tick();
+                    }
+                });
+            })
+
         }
     }
 
