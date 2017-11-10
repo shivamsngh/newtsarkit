@@ -285,7 +285,7 @@ export class HomePage {
                     onSuccess: (arScene: ARThreeScene, arController, arCamera) => {
                         arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
 
-                        var renderer = this.createWebGLRenderer(vw, vh);
+                        var renderer = this.createWebGLRenderer(vw, vh, arController);
                         document.body.appendChild(renderer.domElement);
 
                         var rotationTarget = 0;
@@ -339,13 +339,21 @@ export class HomePage {
         return icosahedron;
     }
 
-    private createWebGLRenderer(width: number, height: number): WebGLRenderer {
+    private createWebGLRenderer(width: number, height: number, arController): WebGLRenderer {
         var renderer = new WebGLRenderer({
             antialias: true,
             alpha: true
         });
-        renderer.setClearColor(new Color('lightgrey'), 0)
-        renderer.setSize(height, width);
+        renderer.setClearColor(new Color('lightgrey'), 0);
+        console.log("orient",arController.orientation);
+        if (arController.orientation === 'portrait') {
+            renderer.setSize(height, width);
+            renderer.domElement.style.transformOrigin = '0 0';
+            renderer.domElement.style.transform = 'rotate(-90deg) translateX(-100%)';
+        } else {
+            renderer.setSize(width, height);
+        }
+        // renderer.setSize(width, height);
         renderer.domElement.style.position = 'absolute'
         renderer.domElement.style.top = '50%';
         renderer.domElement.style.left = '50%';
