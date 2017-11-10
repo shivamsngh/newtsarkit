@@ -228,7 +228,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 
 import { WebGLRenderer, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading } from 'three';
-import { ARController, ARThreeScene, artoolkit } from 'jsartoolkit5';
+import { ARController, ARThreeScene, artoolkit, CameraDeviceConfig } from 'jsartoolkit5';
 
 @Component({
     selector: 'page-home',
@@ -241,11 +241,26 @@ export class HomePage {
     width: number;
     height: number;
     stream: MediaStream;
+    deviceId: string;
 
     constructor(platform: Platform, public navCtrl: NavController) {
         this.width = 640;//platform.width();
         this.height = 480;//platform.height();
         console.log(`WxH: ${this.width}x${this.height}`);
+        this.getDeviceId().then(id => this.deviceId = id);
+    }
+
+    public getDeviceId() {
+        return navigator.mediaDevices.enumerateDevices().then(info => {
+            console.log("cam info", info);
+            let devId: string = 'unkwn';
+            info.forEach(x => {
+                if (x.kind.toString() === "rear" || x.kind.toString() === "back") {
+                    devId = x.deviceId;
+                }
+            });
+            return devId;
+        });
     }
 
     ngAfterViewInit() {
@@ -255,11 +270,12 @@ export class HomePage {
 
         if ('MediaDevices' in window || navigator.getUserMedia) {
             let constraints: MediaStreamConstraints = { video: { facingMode: 'environment' } };
+            let camConfig: CameraDeviceConfig = { video: { deviceId: this.deviceId } }
             console.log("Mediascreens");
             console.log(navigator.mediaDevices.getUserMedia(constraints));
             ARController.getUserMediaThreeScene({
                 maxARVideoSize: 640,
-                // cameraConfig:,
+                cameraConfig: camConfig,
                 cameraParam: 'assets/data/camera_para.dat',
                 onSuccess: (arScene: ARThreeScene, arController, arCamera) => {
                     arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
