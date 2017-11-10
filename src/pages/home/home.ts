@@ -204,14 +204,14 @@
 // 		} else {
 // 			renderer.setSize(width,height);
 //     }
-    
+
 //     renderer.domElement.style.transformOrigin = '0 0';
 //     renderer.domElement.style.transform = 'rotate(-90deg) translateX(-100%)';
 //     renderer.setClearColor(new Color('lightgrey'), 0)
 //     renderer.domElement.style.position = 'absolute'
 //     renderer.domElement.style.top = '0px';
 //     renderer.domElement.style.left = '0px';
-   
+
 //     // renderer.domElement.style.transform = 'translate(-50%, -50%)';
 //     // renderer.domElement.className = 'center';
 //     return renderer;
@@ -254,8 +254,11 @@ export class HomePage {
         let vh = this.height;
 
         if ('MediaDevices' in window || navigator.getUserMedia) {
+            let constraints: MediaStreamConstraints = { video: { facingMode: 'environment' } };
+            console.log(navigator.mediaDevices.getUserMedia(constraints));
             ARController.getUserMediaThreeScene({
                 maxARVideoSize: 640,
+                // cameraConfig:,
                 cameraParam: 'assets/data/camera_para.dat',
                 onSuccess: (arScene: ARThreeScene, arController, arCamera) => {
                     arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
