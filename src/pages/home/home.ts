@@ -285,7 +285,7 @@ export class HomePage {
                     onSuccess: (arScene: ARThreeScene, arController, arCamera) => {
                         arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
 
-                        var renderer = this.createWebGLRenderer(vw, vh, arController);
+                        var renderer = this.createWebGLRenderer(vw, vh, arController, arScene);
                         document.body.appendChild(renderer.domElement);
 
                         var rotationTarget = 0;
@@ -339,25 +339,32 @@ export class HomePage {
         return icosahedron;
     }
 
-    private createWebGLRenderer(width: number, height: number, arController): WebGLRenderer {
+    private createWebGLRenderer(width: number, height: number, arController, arScene): WebGLRenderer {
         var renderer = new WebGLRenderer({
             antialias: true,
             alpha: true
         });
         renderer.setClearColor(new Color('lightgrey'), 0);
         console.log("orient",arController.orientation);
+        var f = Math.min(
+			window.innerWidth / arScene.video.videoWidth,
+			window.innerHeight / arScene.video.videoHeight
+		);
+		var w = f * arScene.video.videoWidth;
+		var h = f * arScene.video.videoHeight;
         if (arController.orientation === 'portrait') {
-            renderer.setSize(height, width);
+            renderer.setSize(h, w);
             renderer.domElement.style.transformOrigin = '0 0';
             renderer.domElement.style.transform = 'rotate(-90deg) translateX(-100%)';
         } else {
-            renderer.setSize(width, height);
+            renderer.setSize(w, h);
         }
+
         // renderer.setSize(width, height);
-        renderer.domElement.style.position = 'absolute'
-        renderer.domElement.style.top = '50%';
-        renderer.domElement.style.left = '50%';
-        renderer.domElement.style.transform = 'translate(-50%, -50%)';
+        // renderer.domElement.style.position = 'absolute'
+        // renderer.domElement.style.top = '50%';
+        // renderer.domElement.style.left = '50%';
+        // renderer.domElement.style.transform = 'translate(-50%, -50%)';
         renderer.domElement.className = 'center';
         return renderer;
     }
