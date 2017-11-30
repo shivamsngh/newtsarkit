@@ -290,6 +290,7 @@ export class HomePage {
 
                         var rotationTarget = 0;
                         renderer.domElement.addEventListener('click', function (ev) {
+                            console.log("Inside click")
                             ev.preventDefault();
                             rotationTarget += 1;
                         }, false);
@@ -301,6 +302,7 @@ export class HomePage {
                         this.trackMarker(arScene, arController, 20, icosahedron);
 
                         let tick = () => {
+                            console.log("Inside tick")
                             arScene.process();
                             arScene.renderOn(renderer);
                             requestAnimationFrame(tick);
@@ -313,12 +315,22 @@ export class HomePage {
         }
     }
 
+    /**
+     * Tracks markers in scene
+     * @param arScene 
+     * @param arController 
+     * @param markerId 
+     * @param object 
+     */
     private trackMarker(arScene: ARThreeScene, arController, markerId: number, object: Mesh) {
         var marker = arController.createThreeBarcodeMarker(markerId, 1);
         marker.add(object);
         arScene.scene.add(marker);
     }
 
+    /**
+     * Creates Simple Cube
+     */
     private createCube(): Mesh {
         var cube = new Mesh(
             new BoxGeometry(1, 1, 1),
@@ -329,6 +341,9 @@ export class HomePage {
         return cube;
     }
 
+    /**
+     * Creates Sphere
+     */
     private createIcosahedron(): Mesh {
         var icosahedron = new Mesh(
             new IcosahedronGeometry(0.7, 1),
@@ -339,6 +354,13 @@ export class HomePage {
         return icosahedron;
     }
 
+    /**
+     * Creates on device camera 
+     * @param width 
+     * @param height 
+     * @param arController 
+     * @param arScene 
+     */
     private createWebGLRenderer(width: number, height: number, arController, arScene): WebGLRenderer {
         var renderer = new WebGLRenderer({
             antialias: true,
