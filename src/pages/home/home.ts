@@ -365,11 +365,14 @@ export class HomePage {
         console.log("Starting avatar");
         let objLoader = new ObjectLoader();
         let material = new MeshBasicMaterial({ color: 'yellow', side: DoubleSide });
+        console.log("Object oader", objLoader, "material", material);
         try {
+            console.log("trying");
             objLoader.load('assets/avatar/legoobj.obj', (object) => {
                 console.log("Avatar Loaded", object);
                 object.traverse((child) => {
                     if (child instanceof Mesh) {
+                        console.log("inside chind");
                         child.material = material;
                         child.material.shading=FlatShading;
                     }
