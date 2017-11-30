@@ -363,6 +363,7 @@ export class HomePage {
     private createAvatar(callback) {
         let objLoader = new ObjectLoader();
         objLoader.load('assets/avatar/legoobj.obj', (object) => {
+            console.log("Creating avatar");
             callback(object);
         });
     }
