@@ -227,7 +227,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 
-import { WebGLRenderer, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading } from 'three';
+import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading } from 'three';
 import { ARController, ARThreeScene, artoolkit, CameraDeviceConfig } from 'jsartoolkit5';
 
 @Component({
@@ -298,7 +298,10 @@ export class HomePage {
 
                         let cube = this.createCube();
                         let icosahedron = this.createIcosahedron();
-                        this.trackMarker(arScene, arController, 5, cube);
+                        let avatar=this.createAvatar(object=>{
+                            this.trackMarker(arScene, arController, 5, object);
+                        })
+                        // this.trackMarker(arScene, arController, 5, cube);
                         this.trackMarker(arScene, arController, 20, icosahedron);
 
                         let tick = () => {
@@ -355,6 +358,15 @@ export class HomePage {
     }
 
     /**
+     * Create Avatar
+     */
+    private createAvatar(callback) {
+        let objLoader = new ObjectLoader();
+        objLoader.load('assets/avatar/legoobj.obj', (object) => {
+            callback(object);
+        });
+    }
+    /**
      * Creates on device camera 
      * @param width 
      * @param height 
@@ -367,13 +379,13 @@ export class HomePage {
             alpha: true
         });
         renderer.setClearColor(new Color('lightgrey'), 0);
-        console.log("orient",arController.orientation);
+        console.log("orient", arController.orientation);
         var f = Math.min(
-			window.innerWidth / arScene.video.videoWidth,
-			window.innerHeight / arScene.video.videoHeight
-		);
-		var w = f * arScene.video.videoWidth;
-		var h = f * arScene.video.videoHeight;
+            window.innerWidth / arScene.video.videoWidth,
+            window.innerHeight / arScene.video.videoHeight
+        );
+        var w = f * arScene.video.videoWidth;
+        var h = f * arScene.video.videoHeight;
         if (arController.orientation === 'portrait') {
             renderer.setSize(h, w);
             renderer.domElement.style.transformOrigin = '0 0';
