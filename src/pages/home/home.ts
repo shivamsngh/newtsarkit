@@ -384,6 +384,8 @@ export class HomePage {
                 });
                 object.position.z = 0.5;
                 callback(object);
+            }, () => { }, (error) => {
+                console.log("error in load", error);
             });
         }
         catch (ex) {
