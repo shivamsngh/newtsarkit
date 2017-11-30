@@ -227,7 +227,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 
-import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading } from 'three';
+import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide } from 'three';
 import { ARController, ARThreeScene, artoolkit, CameraDeviceConfig } from 'jsartoolkit5';
 
 @Component({
@@ -299,7 +299,7 @@ export class HomePage {
                         // let cube = this.createCube();
                         let icosahedron = this.createIcosahedron();
                         this.createAvatar((object) => {
-                            console.log("Creating avatar");
+                            console.log("Creating avatar", object);
                             this.trackMarker(arScene, arController, 5, object);
                         });
                         // this.trackMarker(arScene, arController, 5, cube);
@@ -364,10 +364,23 @@ export class HomePage {
     private createAvatar(callback) {
         console.log("Calling create avatar");
         let objLoader = new ObjectLoader();
-        objLoader.load('assets/avatar/legoobj.obj', (object) => {
-            console.log("Creating avatar");
-            callback(object);
-        });
+        let material = new MeshBasicMaterial({ color: 'yellow', side: DoubleSide });
+        try {
+            objLoader.load('assets/avatar/legoobj.obj', (object) => {
+                console.log("Creating avatar");
+                object.traverse((child) => {
+                    if (child instanceof Mesh) {
+                        child.material = material;
+                    }
+                });
+                callback(object);
+            });
+        }
+        catch (ex) {
+            console.log("Exception", ex);
+            callback(null);
+        }
+
     }
     /**
      * Creates on device camera 
