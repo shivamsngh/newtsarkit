@@ -372,7 +372,7 @@ export class HomePage {
         console.log("Object oader", objLoader, "material", material);
         try {
             console.log("trying");
-            objLoader.load('legoobj.obj', function (object) {
+            objLoader.load('assets/avatar/legoobj.obj', function (object) {
                 console.log("Avatar Loaded", object);
                 // let mesh = new Mesh(object, material);
                 object.traverse((child) => {
