@@ -298,7 +298,7 @@ export class HomePage {
 
                         let cube = this.createCube();
                         let icosahedron = this.createIcosahedron();
-                        let avatar=this.createAvatar(object=>{
+                        let avatar = this.createAvatar(object => {
                             this.trackMarker(arScene, arController, 5, object);
                         })
                         // this.trackMarker(arScene, arController, 5, cube);
