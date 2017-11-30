@@ -306,7 +306,7 @@ export class HomePage {
                         this.trackMarker(arScene, arController, 20, icosahedron);
                         console.log("WTF Testing");
                         let tick = () => {
-                            // console.log("Inside tick")
+                            // console.log("Inside tick");
                             arScene.process();
                             arScene.renderOn(renderer);
                             requestAnimationFrame(tick);
