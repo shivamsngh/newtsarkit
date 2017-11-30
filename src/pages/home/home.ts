@@ -298,7 +298,7 @@ export class HomePage {
 
                         // let cube = this.createCube();
                         let icosahedron = this.createIcosahedron();
-                        let avatar = this.createAvatar(object => {
+                        let avatar = this.createAvatar((object) => {
                             console.log("Creating avatar");
                             this.trackMarker(arScene, arController, 5, object);
                         });
@@ -306,7 +306,7 @@ export class HomePage {
                         this.trackMarker(arScene, arController, 20, icosahedron);
                         console.log("WTF Testing");
                         let tick = () => {
-                            console.log("Inside tick")
+                            // console.log("Inside tick")
                             arScene.process();
                             arScene.renderOn(renderer);
                             requestAnimationFrame(tick);

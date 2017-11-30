@@ -301,7 +301,7 @@ var HomePage = (function () {
                         _this.trackMarker(arScene, arController, 20, icosahedron);
                         console.log("WTF Testing");
                         var tick = function () {
-                            console.log("Inside tick");
+                            // console.log("Inside tick")
                             arScene.process();
                             arScene.renderOn(renderer);
                             requestAnimationFrame(tick);
