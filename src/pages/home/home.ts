@@ -227,7 +227,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 
-import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide } from 'three';
+import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide, LoadingManager } from 'three';
 import { ARController, ARThreeScene, artoolkit, CameraDeviceConfig } from 'jsartoolkit5';
 
 @Component({
@@ -363,18 +363,22 @@ export class HomePage {
      */
     private createAvatar(callback) {
         console.log("Starting avatar 1");
-        let objLoader = new ObjectLoader();
+        let manager = new LoadingManager();
+        manager.onLoad = function () {
+            console.log('Loading complete!');
+        };
+        let objLoader = new ObjectLoader(manager);
         let material = new MeshBasicMaterial({ color: 'yellow', side: DoubleSide });
         console.log("Object oader", objLoader, "material", material);
         try {
             console.log("trying");
-            objLoader.load('assets/avatar/legoobj.obj', (object) => {
+            objLoader.load('legoobj.obj', (object) => {
                 console.log("Avatar Loaded", object);
                 object.traverse((child) => {
                     if (child instanceof Mesh) {
                         console.log("inside chind");
                         child.material = material;
-                        child.material.shading=FlatShading;
+                        child.material.shading = FlatShading;
                     }
                 });
                 object.position.z = 0.5;
