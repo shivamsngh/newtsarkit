@@ -362,7 +362,7 @@ export class HomePage {
      * Create Avatar
      */
     private createAvatar(callback) {
-        console.log("Starting avatar 1");
+        console.log("Starting avatar 2");
         let manager = new LoadingManager();
         manager.onLoad = function () {
             console.log('Loading complete!');
@@ -387,6 +387,7 @@ export class HomePage {
             });
         }
         catch (ex) {
+            console.log("Exception", ex);
             console.log("Exception", ex);
             callback(null);
         }
