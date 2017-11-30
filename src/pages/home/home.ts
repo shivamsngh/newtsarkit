@@ -301,7 +301,7 @@ export class HomePage {
                         let avatar = this.createAvatar(object => {
                             console.log("Creating avatar");
                             this.trackMarker(arScene, arController, 5, object);
-                        })
+                        });
                         // this.trackMarker(arScene, arController, 5, cube);
                         this.trackMarker(arScene, arController, 20, icosahedron);
                         console.log("WTF Testing");
@@ -362,6 +362,7 @@ export class HomePage {
      * Create Avatar
      */
     private createAvatar(callback) {
+        console.log("Calling create avatar");
         let objLoader = new ObjectLoader();
         objLoader.load('assets/avatar/legoobj.obj', (object) => {
             console.log("Creating avatar");
