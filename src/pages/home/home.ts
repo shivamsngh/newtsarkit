@@ -299,7 +299,7 @@ export class HomePage {
                         // let cube = this.createCube();
                         let icosahedron = this.createIcosahedron();
                         this.createAvatar((object) => {
-                            console.log("Creating avatar", object);
+                            console.log("Callback returned", object);
                             this.trackMarker(arScene, arController, 5, object);
                         });
                         // this.trackMarker(arScene, arController, 5, cube);
@@ -362,17 +362,19 @@ export class HomePage {
      * Create Avatar
      */
     private createAvatar(callback) {
-        console.log("Calling create avatar");
+        console.log("Starting avatar");
         let objLoader = new ObjectLoader();
         let material = new MeshBasicMaterial({ color: 'yellow', side: DoubleSide });
         try {
             objLoader.load('assets/avatar/legoobj.obj', (object) => {
-                console.log("Creating avatar");
+                console.log("Avatar Loaded", object);
                 object.traverse((child) => {
                     if (child instanceof Mesh) {
                         child.material = material;
+                        child.material.shading=FlatShading;
                     }
                 });
+                object.position.z = 0.5;
                 callback(object);
             });
         }
