@@ -372,8 +372,9 @@ export class HomePage {
         console.log("Object oader", objLoader, "material", material);
         try {
             console.log("trying");
-            objLoader.load('legoobj.obj', (object) => {
+            objLoader.load('legoobj.obj', function (object) {
                 console.log("Avatar Loaded", object);
+                // let mesh = new Mesh(object, material);
                 object.traverse((child) => {
                     if (child instanceof Mesh) {
                         console.log("inside chind");
