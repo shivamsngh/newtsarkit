@@ -296,9 +296,10 @@ export class HomePage {
                         }, false);
 
 
-                        let cube = this.createCube();
+                        // let cube = this.createCube();
                         let icosahedron = this.createIcosahedron();
                         let avatar = this.createAvatar(object => {
+                            console.log("Creating avatar");
                             this.trackMarker(arScene, arController, 5, object);
                         })
                         // this.trackMarker(arScene, arController, 5, cube);
