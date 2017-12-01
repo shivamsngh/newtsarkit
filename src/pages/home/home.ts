@@ -381,7 +381,6 @@ export class HomePage {
             console.log("trying");
             objLoader.setTexturePath('assets/avatar');
             objLoader.load('assets/avatar/model.obj', function (object) {
-
                 console.log("Avatar Loaded", object);
                 // let mesh = new Mesh(object, material);
                 object.traverse((child) => {
