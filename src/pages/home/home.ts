@@ -371,27 +371,26 @@ export class HomePage {
         manager.onLoad = function () {
             console.log('Loading complete!');
         };
-        manager.onError = function () {
-            console.log("Error in loding res");
-        }
-        let objLoader = new ObjectLoader(manager);
+        // manager.onError = function () {
+        //     console.log("Error in loding res");
+        // }
+        let objLoader = new JSONLoader(manager);
         let material = new MeshBasicMaterial({ color: 'yellow', side: DoubleSide });
         console.log("Object oader", objLoader, "material", material);
         try {
             console.log("trying");
-            objLoader.setTexturePath('assets/avatar');
-            objLoader.load('assets/avatar/model.obj', function (object) {
+            objLoader.load('assets/avatar/model.json', (object) =>{
                 console.log("Avatar Loaded", object);
-                // let mesh = new Mesh(object, material);
-                object.traverse((child) => {
+                let mesh = new Mesh(object, material); 
+                mesh.traverse((child) => {
                     if (child instanceof Mesh) {
                         console.log("inside chind");
                         child.material = material;
                         child.material.shading = FlatShading;
                     }
                 });
-                object.position.z = 0.5;
-                callback(object);
+                mesh.position.z = 0.5;
+                callback(mesh);
             });
         }
         catch (ex) {
