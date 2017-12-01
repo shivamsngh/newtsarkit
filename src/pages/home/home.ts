@@ -227,7 +227,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 
-import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide, LoadingManager } from 'three';
+import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide, LoadingManager, Material } from 'three';
 import { ARController, ARThreeScene, artoolkit, CameraDeviceConfig } from 'jsartoolkit5';
 
 @Component({
@@ -340,7 +340,9 @@ export class HomePage {
             new BoxGeometry(1, 1, 1),
             new MeshNormalMaterial()
         );
-        cube.material.shading = FlatShading;
+        const m = cube.material as Material; 
+        m.shading = FlatShading; 
+        // cube.material.shading = FlatShading;
         cube.position.z = 0.5;
         return cube;
     }
@@ -353,7 +355,9 @@ export class HomePage {
             new IcosahedronGeometry(0.7, 1),
             new MeshNormalMaterial()
         );
-        icosahedron.material.shading = FlatShading;
+        const m = icosahedron.material as Material; 
+        m.shading = FlatShading; 
+        // icosahedron.material.shading = FlatShading;
         icosahedron.position.z = 0.7;
         return icosahedron;
     }

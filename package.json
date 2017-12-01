@@ -27,6 +27,7 @@
     "@ionic-native/splash-screen": "4.3.2",
     "@ionic-native/status-bar": "4.3.2",
     "@ionic/storage": "2.0.1",
+    "@types/three": "^0.84.33",
     "android-camera-permission": "^1.0.0",
     "babylonjs": "^3.1.0-alpha3.6",
     "connect": "^3.6.5",
@@ -46,7 +47,7 @@
     "rxjs": "5.4.3",
     "serve-static": "^1.13.1",
     "sw-toolbox": "3.6.0",
-    "three": "^0.82.1",
+    "three": "^0.88.0",
     "zone.js": "0.8.18"
   },
   "devDependencies": {
@@ -100,13 +101,12 @@
       "rxjs": "5.4.3",
       "serve-static": "^1.11.1",
       "sw-toolbox": "3.6.0",
-      "three": "^0.82.1",
+      "three": "0.88.0",
       "zone.js": "0.8.18"
     },
     "devDependencies": {
       "@ionic/app-scripts": "3.0.1",
       "@types/node": "^8.0.47",
-      "@types/three": "^0.0.27",
       "@types/webrtc": "0.0.21",
       "typescript": "2.3.4"
     },
