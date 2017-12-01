@@ -340,8 +340,8 @@ export class HomePage {
             new BoxGeometry(1, 1, 1),
             new MeshNormalMaterial()
         );
-        const m = cube.material as Material; 
-        m.shading = FlatShading; 
+        const m = cube.material as Material;
+        m.shading = FlatShading;
         // cube.material.shading = FlatShading;
         cube.position.z = 0.5;
         return cube;
@@ -355,8 +355,8 @@ export class HomePage {
             new IcosahedronGeometry(0.7, 1),
             new MeshNormalMaterial()
         );
-        const m = icosahedron.material as Material; 
-        m.shading = FlatShading; 
+        const m = icosahedron.material as Material;
+        m.shading = FlatShading;
         // icosahedron.material.shading = FlatShading;
         icosahedron.position.z = 0.7;
         return icosahedron;
@@ -371,12 +371,16 @@ export class HomePage {
         manager.onLoad = function () {
             console.log('Loading complete!');
         };
+        manager.onError = function () {
+            console.log("Error in loding res");
+        }
         let objLoader = new ObjectLoader(manager);
         let material = new MeshBasicMaterial({ color: 'yellow', side: DoubleSide });
         console.log("Object oader", objLoader, "material", material);
         try {
             console.log("trying");
             objLoader.load('assets/avatar/legoobj.obj', function (object) {
+
                 console.log("Avatar Loaded", object);
                 // let mesh = new Mesh(object, material);
                 object.traverse((child) => {
