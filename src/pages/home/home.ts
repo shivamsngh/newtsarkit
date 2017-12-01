@@ -298,10 +298,10 @@ export class HomePage {
 
                         // let cube = this.createCube();
                         let icosahedron = this.createIcosahedron();
-                        // this.createAvatar((object) => {
-                        //     console.log("Callback returned", object);
-                        //     this.trackMarker(arScene, arController, 5, object);
-                        // });
+                        this.createAvatar((object) => {
+                            console.log("Callback returned", object);
+                            this.trackMarker(arScene, arController, 5, object);
+                        });
                         // this.trackMarker(arScene, arController, 5, cube);
                         this.trackMarker(arScene, arController, 20, icosahedron);
                         console.log("WTF Testing");
@@ -366,7 +366,7 @@ export class HomePage {
      * Create Avatar
      */
     private createAvatar(callback) {
-        console.log("Starting avatar 2");
+        console.log("Starting avatar 3");
         let manager = new LoadingManager();
         manager.onLoad = function () {
             console.log('Loading complete!');
