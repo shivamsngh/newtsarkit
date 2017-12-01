@@ -390,7 +390,7 @@ export class HomePage {
                         child.material.shading = FlatShading;
                     }
                 });
-                obj.position.z = 0.5;
+                obj.position.z = 0.1;
                 callback(obj);
             });
         }
