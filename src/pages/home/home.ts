@@ -366,7 +366,7 @@ export class HomePage {
      * Create Avatar
      */
     private createAvatar(callback) {
-        console.log("Starting avatar 4");
+        console.log("Starting avatar 5");
         let manager = new LoadingManager();
         manager.onLoad = function () {
             console.log('Loading complete!');
@@ -375,23 +375,23 @@ export class HomePage {
         // manager.onError = function () {
         //     console.log("Error in loding res");
         // }
-        let objLoader = new JSONLoader(manager);
+        let objLoader = new ObjectLoader(manager);
         let material = new MeshBasicMaterial({ color: 'yellow', side: DoubleSide });
         console.log("Object oader", objLoader, "material", material);
         try {
             console.log("trying");
-            objLoader.load('assets/avatar/model.json', (object) =>{
-                console.log("Avatar Loaded", object);
-                let mesh = new Mesh(object, material); 
-                mesh.traverse((child) => {
+            objLoader.load('assets/avatar/model.json', (obj) =>{
+                console.log("Avatar Loaded", obj);
+                // let mesh = new Mesh(object, material); 
+                obj.traverse((child) => {
                     if (child instanceof Mesh) {
                         console.log("inside chind");
                         child.material = material;
                         child.material.shading = FlatShading;
                     }
                 });
-                mesh.position.z = 0.5;
-                callback(mesh);
+                obj.position.z = 0.5;
+                callback(obj);
             });
         }
         catch (ex) {
