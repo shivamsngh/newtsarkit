@@ -370,6 +370,7 @@ export class HomePage {
         let manager = new LoadingManager();
         manager.onLoad = function () {
             console.log('Loading complete!');
+            console.log('Loading complete!');
         };
         // manager.onError = function () {
         //     console.log("Error in loding res");
