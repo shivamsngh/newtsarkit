@@ -47,7 +47,7 @@
     "rxjs": "5.4.3",
     "serve-static": "^1.13.1",
     "sw-toolbox": "3.6.0",
-    "three": "^0.88.0",
+    "three": "^0.84.0",
     "zone.js": "0.8.18"
   },
   "devDependencies": {
@@ -101,7 +101,7 @@
       "rxjs": "5.4.3",
       "serve-static": "^1.11.1",
       "sw-toolbox": "3.6.0",
-      "three": "0.88.0",
+      "three": "0.84.0",
       "zone.js": "0.8.18"
     },
     "devDependencies": {
