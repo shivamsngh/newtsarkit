@@ -390,10 +390,11 @@ export class HomePage {
                     child.material.shading = FlatShading;
                 }
             });
-            obj.position.z = -1.5;
-            console.log('positionobj x:', obj.position.x, 'y', obj.position.y, 'z', obj.position.z);
+            obj.position.z = -3;
             obj.position.x = 1;
             obj.position.y = 1;
+            console.log('positionobj x:', obj.position.x, 'y', obj.position.y, 'z', obj.position.z);
+            
             callback(obj);
         });
         // catch (ex) {
