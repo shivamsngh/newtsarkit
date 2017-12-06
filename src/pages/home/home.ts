@@ -366,39 +366,39 @@ export class HomePage {
      * Create Avatar
      */
     private createAvatar(callback) {
-        console.log("Starting avatar 5");
+        console.log("Starting avatar 6");
         let manager = new LoadingManager();
-        manager.onLoad = function () {
-            console.log('Loading complete!');
-            console.log('Loading complete!');
+        manager.onLoad = () => {
+            console.log('Loading started!');
         };
-        // manager.onError = function () {
-        //     console.log("Error in loding res");
-        // }
+        manager.onError = () => {
+            console.log("Error in loding res");
+        }
+        manager.onProgress = (url, itemsLoaded, itemsTotal) => {
+            console.log('Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.');
+        };
         let objLoader = new ObjectLoader(manager);
         let material = new MeshBasicMaterial({ color: 'yellow', side: DoubleSide });
         console.log("Object oader", objLoader, "material", material);
-        try {
-            console.log("trying");
-            objLoader.load('assets/avatar/model.json', (obj) =>{
-                console.log("Avatar Loaded", obj);
-                // let mesh = new Mesh(object, material); 
-                obj.traverse((child) => {
-                    if (child instanceof Mesh) {
-                        console.log("inside chind");
-                        child.material = material;
-                        child.material.shading = FlatShading;
-                    }
-                });
-                obj.position.z = 0.1;
-                callback(obj);
+        objLoader.load('assets/avatar/model.json', (obj) => {
+            console.log("Avatar Loaded", obj);
+            // let mesh = new Mesh(object, material); 
+            obj.traverse((child) => {
+                if (child instanceof Mesh) {
+                    console.log("inside child");
+                    child.material = material;
+                    child.material.shading = FlatShading;
+                }
             });
-        }
-        catch (ex) {
-            console.log("Exception", ex);
-            console.log("Exception", ex);
-            callback(null);
-        }
+            // obj.position.z ;
+            console.log('positionobj x:', obj.position.x, 'y', obj.position.y, 'z', obj.position.z);
+            // obj.position.x = 0;
+            callback(obj);
+        });
+        // catch (ex) {
+        //     console.log("Exception", ex);
+        //     callback(null);
+        // }
 
     }
     /**
