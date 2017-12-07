@@ -399,7 +399,7 @@ export class HomePage {
                     child.material.shading = FlatShading;
                 }
             });
-            // obj.rotation.x = 90;
+            obj.rotation.x = 90;
             // obj.rotation.y = 45;
             obj.position.z = 0.5;
             // obj.position.z = -7;
