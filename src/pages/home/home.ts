@@ -403,6 +403,9 @@ export class HomePage {
             // Formula will be pi/2 for 90 deg
             obj.rotation.x = Math.PI/2;
             obj.position.z = 0.5;
+            obj.scale.x=0.7;
+            obj.scale.y=0.7;
+            obj.scale.z=0.7;
             console.log('positionobj x:', obj.position.x, 'y', obj.position.y, 'z', obj.position.z);
             callback(obj);
         });
