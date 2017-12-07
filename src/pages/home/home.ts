@@ -227,7 +227,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 
-import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide, LoadingManager, Material, JSONLoader } from 'three';
+import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide, LoadingManager, Material, JSONLoader, Object3D } from 'three';
 import { ARController, ARThreeScene, artoolkit, CameraDeviceConfig } from 'jsartoolkit5';
 
 @Component({
@@ -399,14 +399,13 @@ export class HomePage {
                     child.material.shading = FlatShading;
                 }
             });
-            // obj.rotation.x = 60;
-            obj.rotation.y = 45;
+            // obj.rotation.x = 90;
+            // obj.rotation.y = 45;
             obj.position.z = 0.5;
             // obj.position.z = -7;
             // obj.position.x = -1;
             // obj.position.y = -1;
             console.log('positionobj x:', obj.position.x, 'y', obj.position.y, 'z', obj.position.z);
-
             callback(obj);
         });
         // catch (ex) {
@@ -414,6 +413,10 @@ export class HomePage {
         //     callback(null);
         // }
 
+    }
+
+    public incrementXAngle(object: Object3D) {
+        object.rotation.x += 5;
     }
     /**
      * Creates on device camera 
