@@ -366,7 +366,7 @@ export class HomePage {
      * Create Avatar
      */
     private createAvatar(callback) {
-        console.log("Starting avatar 18");
+        console.log("Starting avatar 19");
         let manager = new LoadingManager();
         manager.onLoad = () => {
             console.log('Loading started!');
@@ -399,9 +399,12 @@ export class HomePage {
                     child.material.shading = FlatShading;
                 }
             });
-            obj.rotation.x = 100;
+
+            //Rotation angle is in radians
+            // Formula will be pi/2 for 90 deg
+            obj.rotation.x = Math.PI/2;
             // obj.rotation.y = 45;
-            obj.position.z = 0.5;
+            // obj.position.z = 0.5;
             // obj.position.z = -7;
             // obj.position.x = -1;
             // obj.position.y = -1;
