@@ -371,7 +371,8 @@ export class HomePage {
         manager.onLoad = () => {
             console.log('Loading started!');
             try {
-                let speech = new SpeechSynthesis;
+                let speech = window.speechSynthesis;
+                // let speech = new window.speechSynthesis;
                 let speak = new SpeechSynthesisUtterance('Hey Ya Boy, Whats up.');
                 speech.speak(speak);
             }
@@ -398,8 +399,8 @@ export class HomePage {
                     child.material.shading = FlatShading;
                 }
             });
-            obj.rotation.x = 60;
-            // obj.rotation.y = 135;
+            // obj.rotation.x = 60;
+            obj.rotation.y = 90;
             obj.position.z = 0.5;
             // obj.position.z = -7;
             // obj.position.x = -1;
