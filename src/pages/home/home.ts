@@ -366,7 +366,7 @@ export class HomePage {
      * Create Avatar
      */
     private createAvatar(callback) {
-        console.log("Starting avatar 11");
+        console.log("Starting avatar 12");
         let manager = new LoadingManager();
         manager.onLoad = () => {
             console.log('Loading started!');
@@ -378,7 +378,7 @@ export class HomePage {
             console.log('Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.');
         };
         let objLoader = new ObjectLoader(manager);
-        let material = new MeshBasicMaterial({ color: 'green', side: DoubleSide });
+        let material = new MeshNormalMaterial();
         console.log("Object oader", objLoader, "material", material);
         objLoader.load('assets/avatar/legoboy.json', (obj) => {
             console.log("Avatar Loaded", obj);
@@ -390,11 +390,12 @@ export class HomePage {
                     child.material.shading = FlatShading;
                 }
             });
+            obj.rotation.z = 90;
             // obj.position.z = -7;
             // obj.position.x = -1;
             // obj.position.y = -1;
             console.log('positionobj x:', obj.position.x, 'y', obj.position.y, 'z', obj.position.z);
-            
+
             callback(obj);
         });
         // catch (ex) {
