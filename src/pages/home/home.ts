@@ -366,7 +366,7 @@ export class HomePage {
      * Create Avatar
      */
     private createAvatar(callback) {
-        console.log("Starting avatar 14");
+        console.log("Starting avatar 15");
         let manager = new LoadingManager();
         manager.onLoad = () => {
             console.log('Loading started!');
