@@ -366,7 +366,7 @@ export class HomePage {
      * Create Avatar
      */
     private createAvatar(callback) {
-        console.log("Starting avatar 10");
+        console.log("Starting avatar 11");
         let manager = new LoadingManager();
         manager.onLoad = () => {
             console.log('Loading started!');
@@ -380,7 +380,7 @@ export class HomePage {
         let objLoader = new ObjectLoader(manager);
         let material = new MeshBasicMaterial({ color: 'yellow', side: DoubleSide });
         console.log("Object oader", objLoader, "material", material);
-        objLoader.load('assets/avatar/model.json', (obj) => {
+        objLoader.load('assets/avatar/legoboy.json', (obj) => {
             console.log("Avatar Loaded", obj);
             // let mesh = new Mesh(object, material); 
             obj.traverse((child) => {
