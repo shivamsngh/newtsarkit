@@ -370,6 +370,14 @@ export class HomePage {
         let manager = new LoadingManager();
         manager.onLoad = () => {
             console.log('Loading started!');
+            try {
+                let speech = new SpeechSynthesis();
+                let speak = new SpeechSynthesisUtterance('Hey Ya Boy, Whats up.');
+                speech.speak(speak);
+            }
+            catch (ex) {
+                console.log("error in speaking", ex);
+            }
         };
         manager.onError = () => {
             console.log("Error in loding res");
@@ -391,8 +399,8 @@ export class HomePage {
                 }
             });
             obj.rotation.x = 90;
-            obj.rotation.y = 180;
-            obj.position.x = 0.5;
+            obj.rotation.y = 135;
+            obj.position.z = 0.5;
             // obj.position.z = -7;
             // obj.position.x = -1;
             // obj.position.y = -1;
