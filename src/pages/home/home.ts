@@ -366,12 +366,12 @@ export class HomePage {
      * Create Avatar
      */
     private createAvatar(callback) {
-        console.log("Starting avatar 15");
+        console.log("Starting avatar 16");
         let manager = new LoadingManager();
         manager.onLoad = () => {
             console.log('Loading started!');
             try {
-                let speech = new SpeechSynthesis();
+                let speech = new SpeechSynthesis;
                 let speak = new SpeechSynthesisUtterance('Hey Ya Boy, Whats up.');
                 speech.speak(speak);
             }
@@ -398,8 +398,8 @@ export class HomePage {
                     child.material.shading = FlatShading;
                 }
             });
-            obj.rotation.x = 90;
-            obj.rotation.y = 135;
+            obj.rotation.x = 45;
+            // obj.rotation.y = 135;
             obj.position.z = 0.5;
             // obj.position.z = -7;
             // obj.position.x = -1;
