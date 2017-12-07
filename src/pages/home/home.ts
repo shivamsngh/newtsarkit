@@ -366,7 +366,7 @@ export class HomePage {
      * Create Avatar
      */
     private createAvatar(callback) {
-        console.log("Starting avatar 16");
+        console.log("Starting avatar 17");
         let manager = new LoadingManager();
         manager.onLoad = () => {
             console.log('Loading started!');
@@ -398,7 +398,7 @@ export class HomePage {
                     child.material.shading = FlatShading;
                 }
             });
-            obj.rotation.x = 45;
+            obj.rotation.x = 60;
             // obj.rotation.y = 135;
             obj.position.z = 0.5;
             // obj.position.z = -7;
