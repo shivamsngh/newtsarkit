@@ -1,9 +1,9 @@
 import { Component, ViewChild, ElementRef, Renderer2, OnInit, NgZone } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
-import { DOCUMENT } from '@angular/common';
 
-import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide, LoadingManager, Material, JSONLoader, Object3D } from 'three';
-import { ARController, ARThreeScene, artoolkit, CameraDeviceConfig } from 'jsartoolkit5';
+import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide, LoadingManager, Material, JSONLoader, Object3D, Scene, Camera } from 'three';
+
+import { ARController, ARThreeScene, artoolkit, CameraDeviceConfig, ARCameraParam } from 'jsartoolkit5';
 import Stats from 'stats.js';
 
 @Component({
@@ -33,9 +33,15 @@ export class HomePage implements OnInit {
 
     ngAfterViewInit() {
         console.log("Content", this.content);
-        this.startRendering(this.content);
+        // this.startRendering(this.content);
+        // this.renderVideoStream(this.content);
+        this.createARParameters();
         this.appendStatisticsScreen(this.content)
     }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                             Basic Required Functions                           ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
      * Gets the device ID of the camera and 
@@ -67,6 +73,59 @@ export class HomePage implements OnInit {
         });
     }
 
+       /**
+     * Tracks markers in scene
+     * @param arScene 
+     * @param arController 
+     * @param markerId 
+     * @param object 
+     */
+    private trackMarker(arScene: ARThreeScene, arController, markerId: number, object: Mesh) {
+        var marker = arController.createThreeBarcodeMarker(markerId, 1);
+        marker.add(object);
+        arScene.scene.add(marker);
+    }
+
+    /**
+   * Creates on device camera 
+   * @param width 
+   * @param height 
+   * @param arController 
+   * @param arScene 
+   */
+    private createWebGLRenderer(width: number, height: number, arController, arScene): WebGLRenderer {
+        var renderer = new WebGLRenderer({
+            // antialias: true,
+            alpha: true
+        });
+        renderer.setClearColor(new Color('lightgrey'), 0);
+        console.log("orientation", arController.orientation);
+        // let f = Math.min(
+        //     window.innerWidth / arScene.video.videoWidth,
+        //     window.innerHeight / arScene.video.videoHeight
+        // );
+        // const w = f * arScene.video.videoWidth;
+        // const h = f * arScene.video.videoHeight;
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        if (arController.orientation === 'portrait') {
+            renderer.setSize(h, w);
+            renderer.domElement.style.transformOrigin = '0 0';
+            renderer.domElement.style.transform = 'rotate(-90deg) translateX(-100%)';
+        } else {
+            renderer.setSize(w, h);
+        }
+        renderer.domElement.style.position = 'absolute';
+        renderer.domElement.style.top = '0px';
+        renderer.domElement.style.left = '0px';
+        return renderer;
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                              Canvas Based Rendering                            ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
     /**
      * STart renderng the WEB GL Canvas
      */
@@ -82,7 +141,7 @@ export class HomePage implements OnInit {
             this.getDeviceId().then(id => {
                 console.log("dev id", id);
                 this.deviceId = id;
-                let camConfig: CameraDeviceConfig = { video: { deviceId: this.deviceId } };
+                const camConfig: CameraDeviceConfig = { video: { deviceId: this.deviceId } };
                 ARController.getUserMediaThreeScene({
                     maxARVideoSize: 640,
                     cameraConfig: camConfig,
@@ -117,17 +176,17 @@ export class HomePage implements OnInit {
                         });
                         // this.trackMarker(arScene, arController, 5, cube);
                         this.trackMarker(arScene, arController, 20, icosahedron);
-                        let tick = () => {
+                        let updateRendering = () => {
                             // console.log("Inside tick");
                             // let time = performance.now() / 1000;
                             this.stats.update();
                             this.ngZone.runOutsideAngular(() => {
                                 arScene.process();
                                 arScene.renderOn(renderer);
-                                requestAnimationFrame(tick);
+                                requestAnimationFrame(updateRendering);
                             });
                         };
-                        tick();
+                        updateRendering();
                     }
                 });
             })
@@ -135,8 +194,75 @@ export class HomePage implements OnInit {
         }
     }
 
+ 
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                              Video Based Rendering                            ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
     /**
-     * 
+     * New function which will render video input in videoElement
+     */
+    private renderVideoStream(content: ElementRef) {
+        this.getDeviceId().then(devId => {
+            navigator.mediaDevices.getUserMedia({ video: { deviceId: devId } })
+                .then(stream => {
+                    const domElement: HTMLVideoElement = this.ngRenderer.createElement('video');
+                    domElement.setAttribute('autoplay', '');
+                    domElement.setAttribute('muted', '');
+                    domElement.setAttribute('playsinline', '');
+                    domElement.style.width = window.innerWidth + 'px';
+                    domElement.style.height = window.innerHeight + 'px';
+                    domElement.srcObject = stream;
+                    document.body.addEventListener('click', () => {
+                        domElement.play();
+                    });
+                    this.ngRenderer.appendChild(content.nativeElement, domElement);
+                    domElement.onload = (loaded) => {
+                        console.log("Video Elem Loaded", loaded);
+                        this.ngRenderer.appendChild(content.nativeElement, domElement);
+                    }
+
+                });
+        });
+    }
+
+    /**
+     * Create camera, scene and arcontroller manually
+     */
+    private createARParameters() {
+        // const scene = new Scene();
+        // const camera = new Camera();
+        // const cameraParam = new ARCameraParam();
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        const camConfig: CameraDeviceConfig = { video: { deviceId: this.deviceId } };
+        
+        try{
+            let successFn = (arScene: ARThreeScene, arController, arCamera) => {
+                this.ngRenderer.appendChild(this.content.nativeElement, videoOut);
+            }
+            const videoOut = ARController.getUserMediaThreeScene({
+                maxARVideoSize: 640,
+                cameraConfig: camConfig,
+                cameraParam: 'assets/data/camera_para.dat',
+                onSuccess: successFn
+            })
+        }
+        catch(ex){
+            console.log("Error in projection",ex);
+        }
+        
+
+
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                              Performance Statics                                ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * Append Frame stats on screen
      */
     private appendStatisticsScreen(content: ElementRef) {
         // this.stats.showPanel(1);
@@ -147,22 +273,28 @@ export class HomePage implements OnInit {
             console.log("Error in appendStatisticsScreen", ex);
         }
     }
-    /**
-     * Tracks markers in scene
-     * @param arScene 
-     * @param arController 
-     * @param markerId 
-     * @param object 
-     */
-    private trackMarker(arScene: ARThreeScene, arController, markerId: number, object: Mesh) {
-        var marker = arController.createThreeBarcodeMarker(markerId, 1);
-        marker.add(object);
-        arScene.scene.add(marker);
-    }
+
+
 
     /**
-     * Creates Simple Cube
+     * Increments the angle of x axis of the object.
+     * @param object 
      */
+    public incrementXAngle(object: Object3D): void {
+        object.rotation.x += 5;
+    }
+
+
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                                    3D Objects                                  ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+   * Creates Simple Cube
+   */
     private createCube(): Mesh {
         var cube = new Mesh(
             new BoxGeometry(1, 1, 1),
@@ -241,47 +373,5 @@ export class HomePage implements OnInit {
             console.log('positionobj x:', obj.position.x, 'y', obj.position.y, 'z', obj.position.z);
             callback(obj);
         });
-    }
-
-    /**
-     * Increments the angle of x axis of the object.
-     * @param object 
-     */
-    public incrementXAngle(object: Object3D): void {
-        object.rotation.x += 5;
-    }
-    /**
-     * Creates on device camera 
-     * @param width 
-     * @param height 
-     * @param arController 
-     * @param arScene 
-     */
-    private createWebGLRenderer(width: number, height: number, arController, arScene): WebGLRenderer {
-        var renderer = new WebGLRenderer({
-            // antialias: true,
-            alpha: true
-        });
-        renderer.setClearColor(new Color('lightgrey'), 0);
-        console.log("orientation", arController.orientation);
-        // let f = Math.min(
-        //     window.innerWidth / arScene.video.videoWidth,
-        //     window.innerHeight / arScene.video.videoHeight
-        // );
-        // const w = f * arScene.video.videoWidth;
-        // const h = f * arScene.video.videoHeight;
-        const w = window.innerWidth;
-        const h = window.innerHeight;
-        if (arController.orientation === 'portrait') {
-            renderer.setSize(h, w);
-            renderer.domElement.style.transformOrigin = '0 0';
-            renderer.domElement.style.transform = 'rotate(-90deg) translateX(-100%)';
-        } else {
-            renderer.setSize(w, h);
-        }
-        renderer.domElement.style.position = 'absolute';
-        renderer.domElement.style.top = '0px';
-        renderer.domElement.style.left = '0px';
-        return renderer;
     }
 }
