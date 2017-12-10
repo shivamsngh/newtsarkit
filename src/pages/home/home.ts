@@ -99,7 +99,8 @@ export class HomePage implements OnInit {
                         // dont use document,  instead use viewchild/renderer
                         // document.body.appendChild(renderer.domElement);
                         try {
-                            this.ngRenderer.appendChild(document, renderer.domElement);
+                            this.ngRenderer.appendChild(document.body, renderer.domElement);
+                            // document.appendChild(renderer.domElement);
                         }
                         catch (ex) {
                             console.log("Error in startRendering", ex);
