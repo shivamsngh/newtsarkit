@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef, Renderer2, OnInit } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
+import { DOCUMENT } from '@angular/common';
 
 import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide, LoadingManager, Material, JSONLoader, Object3D } from 'three';
 import { ARController, ARThreeScene, artoolkit, CameraDeviceConfig } from 'jsartoolkit5';
@@ -98,7 +99,7 @@ export class HomePage implements OnInit {
                         // dont use document,  instead use viewchild/renderer
                         // document.body.appendChild(renderer.domElement);
                         try {
-                            this.ngRenderer.appendChild(content.nativeElement, renderer.domElement);
+                            this.ngRenderer.appendChild(document, renderer.domElement);
                         }
                         catch (ex) {
                             console.log("Error in startRendering", ex);
