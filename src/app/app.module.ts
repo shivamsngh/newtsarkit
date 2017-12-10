@@ -6,15 +6,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ArJsPage } from '../pages/ar-js/ar-js';
 import { Diagnostic } from '@ionic-native/diagnostic';
 import { ArengineServiceProvider } from '../providers/arengine-service/arengine-service';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ArJsPage
+    HomePage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +22,6 @@ import { ArengineServiceProvider } from '../providers/arengine-service/arengine-
   entryComponents: [
     MyApp,
     HomePage,
-    ArJsPage
   ],
   providers: [
     StatusBar,
