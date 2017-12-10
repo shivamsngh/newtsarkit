@@ -102,8 +102,8 @@ export class HomePage implements OnInit {
                         // dont use document,  instead use viewchild/renderer
                         // document.body.appendChild(renderer.domElement);
                         try {
-                            // this.ngRenderer.appendChild(document.body, renderer.domElement);
-                            document.body.appendChild(renderer.domElement);
+                            this.ngRenderer.appendChild(content.nativeElement, renderer.domElement);
+                            // document.body.appendChild(renderer.domElement);
                         }
                         catch (ex) {
                             console.log("Error in startRendering", ex);
@@ -121,9 +121,9 @@ export class HomePage implements OnInit {
                             // console.log("Inside tick");
                             // let time = performance.now() / 1000;
                             this.stats.update();
-                            arScene.process();
-                            arScene.renderOn(renderer);
                             this.ngZone.runOutsideAngular(() => {
+                                arScene.process();
+                                arScene.renderOn(renderer);
                                 requestAnimationFrame(tick);
                             });
                         };
@@ -259,15 +259,15 @@ export class HomePage implements OnInit {
      */
     private createWebGLRenderer(width: number, height: number, arController, arScene): WebGLRenderer {
         var renderer = new WebGLRenderer({
-            antialias: true,
+            // antialias: true,
             alpha: true
         });
         renderer.setClearColor(new Color('lightgrey'), 0);
-        console.log("orient", arController.orientation);
-        let f = Math.min(
-            window.innerWidth / arScene.video.videoWidth,
-            window.innerHeight / arScene.video.videoHeight
-        );
+        console.log("orientation", arController.orientation);
+        // let f = Math.min(
+        //     window.innerWidth / arScene.video.videoWidth,
+        //     window.innerHeight / arScene.video.videoHeight
+        // );
         // const w = f * arScene.video.videoWidth;
         // const h = f * arScene.video.videoHeight;
         const w = window.innerWidth;
@@ -278,15 +278,10 @@ export class HomePage implements OnInit {
             renderer.domElement.style.transform = 'rotate(-90deg) translateX(-100%)';
         } else {
             renderer.setSize(w, h);
-            renderer.domElement.style.transformOrigin = '0 0';
-            renderer.domElement.style.transform = 'rotate(-90deg) translateX(-100%)';
         }
-        // renderer.setSize(width, height);
-        // renderer.domElement.style.position = 'absolute'
-        // renderer.domElement.style.top = '50%';
-        // renderer.domElement.style.left = '50%';
-        // renderer.domElement.style.transform = 'translate(-50%, -50%)';
-        // renderer.domElement.className = 'center';
+        renderer.domElement.style.position = 'absolute';
+        renderer.domElement.style.top = '0px';
+        renderer.domElement.style.left = '0px';
         return renderer;
     }
 }
