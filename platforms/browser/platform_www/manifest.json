@@ -1,17 +1,17 @@
 {
-  "name": "TSARKit",
-  "short_name": "TSARKit",
-  "description": "Description of your app from template",
+  "name": "IonicARKit",
+  "short_name": "IAR",
+  "description": "Augmented Reality with touch of Ionic.",
   "start_url": "index.html",
   "scope": "index.html",
   "icons": [
     {
-      "src": "img/logo.png",
+      "src": "assets/imgs/logo.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "img/splash.png",
+      "src": "assets/imgs/splashscreen.png",
       "sizes": "512x512",
       "type": "image/png"
     }

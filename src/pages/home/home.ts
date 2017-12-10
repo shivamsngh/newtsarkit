@@ -57,9 +57,12 @@ export class HomePage implements OnInit {
         });
     }
 
-    ngOnInit() {
-        console.log("Content", this.content);
+    ngOnInit(){
+        console.log("ngOnInit")
+    }
 
+    ngAfterViewInit() {
+        console.log("Content", this.content);
         this.appendStatisticsScreen(this.content)
         this.startRendering(this.content);
     }
@@ -99,8 +102,8 @@ export class HomePage implements OnInit {
                         // dont use document,  instead use viewchild/renderer
                         // document.body.appendChild(renderer.domElement);
                         try {
-                            this.ngRenderer.appendChild(document.body, renderer.domElement);
-                            // document.appendChild(renderer.domElement);
+                            // this.ngRenderer.appendChild(document.body, renderer.domElement);
+                            document.body.appendChild(renderer.domElement);
                         }
                         catch (ex) {
                             console.log("Error in startRendering", ex);
@@ -136,7 +139,7 @@ export class HomePage implements OnInit {
     private appendStatisticsScreen(content: ElementRef) {
         // this.stats.showPanel(1);
         try {
-            this.ngRenderer.appendChild(content.nativeElement, this.stats.dom);
+            // this.ngRenderer.appendChild(content.nativeElement, this.stats.dom);
         }
         catch (ex) {
             console.log("Error in appendStatisticsScreen", ex);
@@ -259,12 +262,14 @@ export class HomePage implements OnInit {
         });
         renderer.setClearColor(new Color('lightgrey'), 0);
         console.log("orient", arController.orientation);
-        var f = Math.min(
+        let f = Math.min(
             window.innerWidth / arScene.video.videoWidth,
             window.innerHeight / arScene.video.videoHeight
         );
-        var w = f * arScene.video.videoWidth;
-        var h = f * arScene.video.videoHeight;
+        // const w = f * arScene.video.videoWidth;
+        // const h = f * arScene.video.videoHeight;
+        const w = window.innerWidth;
+        const h = window.innerHeight;
         if (arController.orientation === 'portrait') {
             renderer.setSize(h, w);
             renderer.domElement.style.transformOrigin = '0 0';
@@ -277,7 +282,7 @@ export class HomePage implements OnInit {
         // renderer.domElement.style.top = '50%';
         // renderer.domElement.style.left = '50%';
         // renderer.domElement.style.transform = 'translate(-50%, -50%)';
-        renderer.domElement.className = 'center';
+        // renderer.domElement.className = 'center';
         return renderer;
     }
 }
