@@ -27,6 +27,16 @@ export class HomePage implements OnInit {
         console.log(`WxH: ${this.width}x${this.height}`);
     }
 
+    ngOnInit() {
+        console.log("ngOnInit")
+    }
+
+    ngAfterViewInit() {
+        console.log("Content", this.content);
+        this.startRendering(this.content);
+        this.appendStatisticsScreen(this.content)
+    }
+
     /**
      * Gets the device ID of the camera and 
      * chooses the rear one.
@@ -55,16 +65,6 @@ export class HomePage implements OnInit {
             }
             return devId;
         });
-    }
-
-    ngOnInit() {
-        console.log("ngOnInit")
-    }
-
-    ngAfterViewInit() {
-        console.log("Content", this.content);
-        this.appendStatisticsScreen(this.content)
-        this.startRendering(this.content);
     }
 
     /**
@@ -278,6 +278,8 @@ export class HomePage implements OnInit {
             renderer.domElement.style.transform = 'rotate(-90deg) translateX(-100%)';
         } else {
             renderer.setSize(w, h);
+            renderer.domElement.style.transformOrigin = '0 0';
+            renderer.domElement.style.transform = 'rotate(-90deg) translateX(-100%)';
         }
         // renderer.setSize(width, height);
         // renderer.domElement.style.position = 'absolute'
