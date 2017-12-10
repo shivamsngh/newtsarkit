@@ -5,6 +5,7 @@ import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeomet
 
 import { ARController, ARThreeScene, artoolkit, CameraDeviceConfig, ARCameraParam } from 'jsartoolkit5';
 import Stats from 'stats.js';
+import { renderDateTime } from 'ionic-angular/util/datetime-util';
 
 @Component({
     selector: 'page-home',
@@ -73,13 +74,13 @@ export class HomePage implements OnInit {
         });
     }
 
-       /**
-     * Tracks markers in scene
-     * @param arScene 
-     * @param arController 
-     * @param markerId 
-     * @param object 
-     */
+    /**
+  * Tracks markers in scene
+  * @param arScene 
+  * @param arController 
+  * @param markerId 
+  * @param object 
+  */
     private trackMarker(arScene: ARThreeScene, arController, markerId: number, object: Mesh) {
         var marker = arController.createThreeBarcodeMarker(markerId, 1);
         marker.add(object);
@@ -194,7 +195,7 @@ export class HomePage implements OnInit {
         }
     }
 
- 
+
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     ////////                              Video Based Rendering                            ////////
@@ -242,21 +243,23 @@ export class HomePage implements OnInit {
             const camConfig: CameraDeviceConfig = { video: { deviceId: this.deviceId } };
             let successFn = (arScene: ARThreeScene, arController, arCamera) => {
                 this.ngRenderer.appendChild(this.content.nativeElement, videoOut);
+                const renderer = this.createWebGLRenderer(vw, vh, arController, arScene);
+                this.ngRenderer.appendChild(this.content.nativeElement,renderer.domElement);
             }
             const videoOut = ARController.getUserMediaThreeScene({
-                width:window.innerWidth,
-                height:window.innerHeight,
+                width: window.innerWidth,
+                height: window.innerHeight,
                 maxARVideoSize: 1280,
                 cameraConfig: camConfig,
                 cameraParam: 'assets/data/camera_para.dat',
                 onSuccess: successFn
             })
         });
-            
+
         // catch(ex){
         //     console.log("Error in projection",ex);
         // }
-        
+
 
 
     }
