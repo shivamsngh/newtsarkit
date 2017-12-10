@@ -236,22 +236,26 @@ export class HomePage implements OnInit {
         // const cameraParam = new ARCameraParam();
         const vw = window.innerWidth;
         const vh = window.innerHeight;
-        const camConfig: CameraDeviceConfig = { video: { deviceId: this.deviceId } };
-        
-        try{
+        this.getDeviceId().then(id => {
+            console.log("dev id", id);
+            this.deviceId = id;
+            const camConfig: CameraDeviceConfig = { video: { deviceId: this.deviceId } };
             let successFn = (arScene: ARThreeScene, arController, arCamera) => {
                 this.ngRenderer.appendChild(this.content.nativeElement, videoOut);
             }
             const videoOut = ARController.getUserMediaThreeScene({
-                maxARVideoSize: 640,
+                width:window.innerWidth,
+                height:window.innerHeight,
+                maxARVideoSize: 1280,
                 cameraConfig: camConfig,
                 cameraParam: 'assets/data/camera_para.dat',
                 onSuccess: successFn
             })
-        }
-        catch(ex){
-            console.log("Error in projection",ex);
-        }
+        });
+            
+        // catch(ex){
+        //     console.log("Error in projection",ex);
+        // }
         
 
 
