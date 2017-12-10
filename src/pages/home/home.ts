@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, Renderer2, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, Renderer2, OnInit, NgZone } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 import { DOCUMENT } from '@angular/common';
 
@@ -21,7 +21,7 @@ export class HomePage implements OnInit {
     stats = new Stats();
 
 
-    constructor(platform: Platform, public navCtrl: NavController, public ngRenderer: Renderer2) {
+    constructor(platform: Platform, public navCtrl: NavController, public ngRenderer: Renderer2, private ngZone: NgZone) {
         this.width = 640;//platform.width();
         this.height = 480;//platform.height();
         console.log(`WxH: ${this.width}x${this.height}`);
@@ -57,7 +57,7 @@ export class HomePage implements OnInit {
         });
     }
 
-    ngOnInit(){
+    ngOnInit() {
         console.log("ngOnInit")
     }
 
@@ -123,7 +123,9 @@ export class HomePage implements OnInit {
                             this.stats.update();
                             arScene.process();
                             arScene.renderOn(renderer);
-                            requestAnimationFrame(tick);
+                            this.ngZone.runOutsideAngular(() => {
+                                requestAnimationFrame(tick);
+                            });
                         };
                         tick();
                     }
@@ -139,7 +141,7 @@ export class HomePage implements OnInit {
     private appendStatisticsScreen(content: ElementRef) {
         // this.stats.showPanel(1);
         try {
-            // this.ngRenderer.appendChild(content.nativeElement, this.stats.dom);
+            this.ngRenderer.appendChild(content.nativeElement, this.stats.dom);
         }
         catch (ex) {
             console.log("Error in appendStatisticsScreen", ex);
