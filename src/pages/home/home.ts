@@ -1,7 +1,8 @@
 import { Component, ViewChild, ElementRef, Renderer2, OnInit, NgZone } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 
-import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide, LoadingManager, Material, JSONLoader, Object3D, Scene, Camera } from 'three';
+import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide, LoadingManager, Material, JSONLoader, Object3D, Scene, Camera, TorusKnotGeometry } from 'three';
+
 
 import { ARController, ARThreeScene, artoolkit, CameraDeviceConfig, ARCameraParam } from 'jsartoolkit5';
 import Stats from 'stats.js';
@@ -247,14 +248,15 @@ export class HomePage implements OnInit {
                 this.ngRenderer.appendChild(this.content.nativeElement, videoOut);
                 arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
                 const renderer = this.createWebGLRenderer(vw, vh, arController, arScene);
-                this.ngRenderer.appendChild(this.content.nativeElement,renderer.domElement);
-                const icosahedron=this.createIcosahedron();
+                this.ngRenderer.appendChild(this.content.nativeElement, renderer.domElement);
+                // const icosahedron = this.createIcosahedron();
+                const torus=this.createTorus();
                 this.createAvatar((object) => {
                     console.log("Callback returned", object);
                     this.trackMarker(arScene, arController, 5, object);
                 });
                 // this.trackMarker(arScene, arController, 5, cube);
-                this.trackMarker(arScene, arController, 20, icosahedron);
+                this.trackMarker(arScene, arController, 20, torus);
                 let updateRendering = () => {
                     // console.log("Inside tick");
                     // let time = performance.now() / 1000;
@@ -315,7 +317,6 @@ export class HomePage implements OnInit {
 
 
 
-
     ////////////////////////////////////////////////////////////////////////////////////////////////
     ////////                                    3D Objects                                  ////////
     ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -324,7 +325,7 @@ export class HomePage implements OnInit {
    * Creates Simple Cube
    */
     private createCube(): Mesh {
-        var cube = new Mesh(
+        const cube = new Mesh(
             new BoxGeometry(1, 1, 1),
             new MeshNormalMaterial()
         );
@@ -339,7 +340,7 @@ export class HomePage implements OnInit {
      * Creates Sphere
      */
     private createIcosahedron(): Mesh {
-        var icosahedron = new Mesh(
+        const icosahedron = new Mesh(
             new IcosahedronGeometry(0.7, 1),
             new MeshNormalMaterial()
         );
@@ -348,6 +349,14 @@ export class HomePage implements OnInit {
         // icosahedron.material.shading = FlatShading;
         icosahedron.position.z = 0.7;
         return icosahedron;
+    }
+
+    private createTorus() {
+        const geometry = new TorusKnotGeometry(0.3, 0.1, 64, 16);
+        const material = new MeshNormalMaterial();
+        const mesh = new Mesh(geometry, material);
+        mesh.position.y = 0.5
+        return mesh;
     }
 
     /**
@@ -402,4 +411,6 @@ export class HomePage implements OnInit {
             callback(obj);
         });
     }
+
+
 }
