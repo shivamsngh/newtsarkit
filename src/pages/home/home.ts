@@ -355,6 +355,9 @@ export class HomePage implements OnInit {
         const geometry = new TorusKnotGeometry(0.3, 0.1, 64, 16);
         const material = new MeshNormalMaterial();
         const mesh = new Mesh(geometry, material);
+        mesh.scale.x=2;
+        mesh.scale.y=2;
+        mesh.scale.z=2;
         mesh.position.y = 0.5
         return mesh;
     }
