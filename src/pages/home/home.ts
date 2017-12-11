@@ -119,6 +119,7 @@ export class HomePage implements OnInit {
         renderer.domElement.style.position = 'absolute';
         renderer.domElement.style.top = '0px';
         renderer.domElement.style.left = '0px';
+        // renderer.render(Scene,Camera)
         return renderer;
     }
 
@@ -202,6 +203,7 @@ export class HomePage implements OnInit {
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
+     * Deprecated __
      * New function which will render video input in videoElement
      */
     private renderVideoStream(content: ElementRef) {
@@ -243,13 +245,32 @@ export class HomePage implements OnInit {
             const camConfig: CameraDeviceConfig = { video: { deviceId: this.deviceId } };
             let successFn = (arScene: ARThreeScene, arController, arCamera) => {
                 this.ngRenderer.appendChild(this.content.nativeElement, videoOut);
+                arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
                 const renderer = this.createWebGLRenderer(vw, vh, arController, arScene);
                 this.ngRenderer.appendChild(this.content.nativeElement,renderer.domElement);
+                const icosahedron=this.createIcosahedron();
+                this.createAvatar((object) => {
+                    console.log("Callback returned", object);
+                    this.trackMarker(arScene, arController, 5, object);
+                });
+                // this.trackMarker(arScene, arController, 5, cube);
+                this.trackMarker(arScene, arController, 20, icosahedron);
+                let updateRendering = () => {
+                    // console.log("Inside tick");
+                    // let time = performance.now() / 1000;
+                    this.stats.update();
+                    this.ngZone.runOutsideAngular(() => {
+                        arScene.process();
+                        arScene.renderOn(renderer);
+                        requestAnimationFrame(updateRendering);
+                    });
+                };
+                updateRendering();
             }
             const videoOut = ARController.getUserMediaThreeScene({
                 width: window.innerWidth,
                 height: window.innerHeight,
-                maxARVideoSize: 1280,
+                maxARVideoSize: 1080,
                 cameraConfig: camConfig,
                 cameraParam: 'assets/data/camera_para.dat',
                 onSuccess: successFn
