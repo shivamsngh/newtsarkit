@@ -262,23 +262,23 @@ export class HomePage implements OnInit {
                 let stop = false;
                 let frameCount = 0;
                 // let $results = $("#results");
-                let fps = 60, fpsInterval, startTime, now, then, elapsed;
+                let fps = 60, fpsInterval, startTime, now, then, elapsed, count = 0;
 
                 let updateRendering = () => {
                     // console.log("Inside tick");
                     // let time = performance.now() / 1000;
                     this.stats.update();
-                    this.ngZone.runOutsideAngular(() => {
-
-                        requestAnimationFrame(updateRendering);
-                        now = performance.now();
-                        elapsed = now - then;
-                        if (elapsed > fpsInterval) {
-                            then = now - (elapsed % fpsInterval);
-                            arScene.process();
-                            arScene.renderOn(renderer);
-                        }
-                    });
+                    // this.ngZone.runOutsideAngular(() => {
+                    requestAnimationFrame(updateRendering);
+                    now = performance.now();
+                    elapsed = now - then;
+                    if (elapsed > fpsInterval) {
+                        console.log("count", ++count);
+                        then = now - (elapsed % fpsInterval);
+                        arScene.process();
+                        arScene.renderOn(renderer);
+                    }
+                    // });
                 };
                 fpsInterval = 1000 / fps;
                 then = performance.now();
