@@ -22,16 +22,8 @@ export class HomePage implements OnInit {
     deviceId: string;
     stats = new Stats();
 
-    renderer: any = {};
-    arScene: any = {};
+    fpsText: string = "";
 
-    fpsInterval: number = 0;
-    startTime: number = 0;
-    now = 0;
-    then = 0;
-    elapsed = 0;
-    count = 0;
-    fpsText: string = '';
 
     constructor(platform: Platform, public navCtrl: NavController, public ngRenderer: Renderer2, private ngZone: NgZone) {
         this.width = 640;//platform.width();
@@ -269,12 +261,34 @@ export class HomePage implements OnInit {
                 // this.trackMarker(arScene, arController, 5, cube);
                 this.trackMarker(arScene, arController, 20, torus);
 
-                this.renderer = renderer;
-                this.arScene = arScene;
-                this.startAnimating(60);
+                let stop = false;
+                let frameCount = 0;
+                // let $results = $("#results");
+                let fps = 60, fpsInterval, startTime, now, then, elapsed, count = 0;
 
-
-
+                let updateRendering = () => {
+                    // console.log("Inside tick");
+                    // let time = performance.now() / 1000;
+                    this.stats.update();
+                    // this.ngZone.runOutsideAngular(() => {
+                    requestAnimationFrame(updateRendering);
+                    now = Date.now();
+                    elapsed = now - then;
+                    if (elapsed > fpsInterval) {
+                        console.log("count a", ++count);
+                        then = now - (elapsed % fpsInterval);
+                        arScene.process();
+                        arScene.renderOn(renderer);
+                        var sinceStart = now - startTime;
+                        var currentFps = Math.round(1000 / (sinceStart / ++count) * 100) / 100;
+                        this.fpsText = `Elapsed time= ${Math.round(sinceStart / 1000 * 100) / 100} secs @${currentFps} fps.`;
+                    }
+                    // });
+                };
+                fpsInterval = 1000 / fps;
+                then = Date.now();
+                startTime = then;
+                updateRendering();
             }
             const videoOut = ARController.getUserMediaThreeScene({
                 width: window.innerWidth,
@@ -292,35 +306,6 @@ export class HomePage implements OnInit {
 
 
 
-    }
-
-    public startAnimating(fps: number) {
-        let frameCount = 0;
-        this.fpsInterval = 1000 / fps;
-        this.then = Date.now();
-        this.startTime = this.then;
-        this.updateRendering();
-    }
-
-    public updateRendering() {
-        // console.log("Inside tick");
-        // let time = performance.now() / 1000;
-        this.stats.update();
-        // this.ngZone.runOutsideAngular(() => {
-        requestAnimationFrame(this.updateRendering);
-        this.now = Date.now();
-        this.elapsed = this.now - this.then;
-        if (this.elapsed > this.fpsInterval) {
-            console.log("count b", ++this.count);
-            this.then = this.now - (this.elapsed % this.fpsInterval);
-            this.arScene.process();
-            this.arScene.renderOn(this.renderer);
-
-            let sinceStart = this.now - this.startTime;
-            let currentFps = Math.round(1000 / (sinceStart / ++this.count) * 100) / 100;
-            this.fpsText = `Elapsed time= ${Math.round(sinceStart / 1000 * 100) / 100} secs @${currentFps}fps.`;
-        }
-        // });
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
