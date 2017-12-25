@@ -233,6 +233,7 @@ export class HomePage implements OnInit {
 
     /**
      * Create camera, scene and arcontroller manually
+     * MAIN
      */
     private createARParameters() {
         // const scene = new Scene();
@@ -250,23 +251,38 @@ export class HomePage implements OnInit {
                 const renderer = this.createWebGLRenderer(vw, vh, arController, arScene);
                 this.ngRenderer.appendChild(this.content.nativeElement, renderer.domElement);
                 // const icosahedron = this.createIcosahedron();
-                const torus=this.createTorus();
+                const torus = this.createTorus();
                 this.createAvatar((object) => {
                     console.log("Callback returned", object);
                     this.trackMarker(arScene, arController, 5, object);
                 });
                 // this.trackMarker(arScene, arController, 5, cube);
                 this.trackMarker(arScene, arController, 20, torus);
+
+                let stop = false;
+                let frameCount = 0;
+                // let $results = $("#results");
+                let fps = 60, fpsInterval, startTime, now, then, elapsed;
+
                 let updateRendering = () => {
                     // console.log("Inside tick");
                     // let time = performance.now() / 1000;
                     this.stats.update();
                     this.ngZone.runOutsideAngular(() => {
-                        arScene.process();
-                        arScene.renderOn(renderer);
+
                         requestAnimationFrame(updateRendering);
+                        now = performance.now();
+                        elapsed = now - then;
+                        if (elapsed > fpsInterval) {
+                            then = now - (elapsed % fpsInterval);
+                            arScene.process();
+                            arScene.renderOn(renderer);
+                        }
                     });
                 };
+                fpsInterval = 1000 / fps;
+                then = performance.now();
+                startTime = then;
                 updateRendering();
             }
             const videoOut = ARController.getUserMediaThreeScene({
@@ -355,9 +371,9 @@ export class HomePage implements OnInit {
         const geometry = new TorusKnotGeometry(0.3, 0.1, 64, 16);
         const material = new MeshNormalMaterial();
         const mesh = new Mesh(geometry, material);
-        mesh.scale.x=2;
-        mesh.scale.y=2;
-        mesh.scale.z=2;
+        mesh.scale.x = 2;
+        mesh.scale.y = 2;
+        mesh.scale.z = 2;
         mesh.position.y = 0.5
         return mesh;
     }
