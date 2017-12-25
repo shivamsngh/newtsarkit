@@ -270,10 +270,10 @@ export class HomePage implements OnInit {
                     this.stats.update();
                     // this.ngZone.runOutsideAngular(() => {
                     requestAnimationFrame(updateRendering);
-                    now = performance.now();
+                    now = Date.now();
                     elapsed = now - then;
                     if (elapsed > fpsInterval) {
-                        console.log("count", ++count);
+                        console.log("count a", ++count);
                         then = now - (elapsed % fpsInterval);
                         arScene.process();
                         arScene.renderOn(renderer);
@@ -281,7 +281,7 @@ export class HomePage implements OnInit {
                     // });
                 };
                 fpsInterval = 1000 / fps;
-                then = performance.now();
+                then = Date.now();
                 startTime = then;
                 updateRendering();
             }
