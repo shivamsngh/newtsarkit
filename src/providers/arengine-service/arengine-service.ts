@@ -143,12 +143,15 @@ export class ArengineServiceProvider {
     });
     renderer.setClearColor(new Color('lightgrey'), 0);
     console.log("orientation", arController.orientation);
-    let f = Math.min(
-      window.innerWidth / arScene.video.videoWidth,
-      window.innerHeight / arScene.video.videoHeight
-    );
-    const w = f * arScene.video.videoWidth;
-    const h = f * arScene.video.videoHeight;
+    // let f = Math.min(
+    //   window.innerWidth / arScene.video.videoWidth,
+    //   window.innerHeight / arScene.video.videoHeight
+    // );
+    // const w = f * arScene.video.videoWidth;
+    // const h = f * arScene.video.videoHeight;
+    const w = width;
+    const h = height;
+    
     if (arController.orientation === 'portrait') {
       renderer.setSize(h, w);
       renderer.domElement.style.transformOrigin = '0 0';
