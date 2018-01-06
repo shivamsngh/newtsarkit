@@ -1,1 +1,1411 @@
-webpackJsonp([0],{155:function(e,n){function t(e){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+e+"'.")})}t.keys=function(){return[]},t.resolve=t,e.exports=t,t.id=155},190:function(e,n){function t(e){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+e+"'.")})}t.keys=function(){return[]},t.resolve=t,e.exports=t,t.id=190},254:function(e,n,t){"use strict";function o(e){return s._25(0,[(e()(),s._5(0,null,null,2,"ion-nav",[],null,null,null,ue.b,ue.a)),s._21(6144,null,pe.a,null,[fe.a]),s._3(4374528,null,0,fe.a,[[2,he.a],[2,ve.a],me.a,ge.a,_e.a,s.k,s.x,s.D,s.j,ye.l,we.a,[2,be.a],ke.a,s.l],{root:[0,"root"]},null),(e()(),s._24(null,["\n"]))],function(e,n){e(n,2,0,n.component.rootPage)},null)}function a(e){return s._25(0,[s._22(402653184,1,{content:0}),(e()(),s._5(0,[[1,0]],null,7,"ion-content",[["class","no-scroll"]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],[["window","resize"]],function(e,n,t){var o=!0;return"window:resize"===n&&(o=!1!==s._19(e,2).resize()&&o),o},xe.b,xe.a)),s._3(4374528,[["mainContent",4]],0,je.a,[ge.a,_e.a,ke.a,s.k,s.D,me.a,Ee.a,s.x,[2,he.a],[2,ve.a]],null,null),(e()(),s._24(1,["\n  "])),(e()(),s._5(0,null,1,1,"p",[["style","color:red;z-index:100000"]],null,null,null,null,null)),(e()(),s._24(null,["",""])),(e()(),s._24(1,["\n  "])),(e()(),s._5(0,null,1,0,"button",[],null,[[null,"click"]],function(e,n,t){var o=!0;return"click"===n&&(o=!1!==e.component.incrementAngle()&&o),o},null,null)),(e()(),s._24(1,["\n"]))],null,function(e,n){var t=n.component;e(n,1,0,s._19(n,2).statusbarPadding,s._19(n,2)._hasRefresher),e(n,5,0,t.fpsText)})}function i(e){return s._25(0,[s._22(402653184,1,{content:0}),(e()(),s._5(0,[[1,0]],null,5,"ion-content",[["class","no-scroll"]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],[["window","resize"]],function(e,n,t){var o=!0;return"window:resize"===n&&(o=!1!==s._19(e,2).resize()&&o),o},xe.b,xe.a)),s._3(4374528,[["mainContent",4]],0,je.a,[ge.a,_e.a,ke.a,s.k,s.D,me.a,Ee.a,s.x,[2,he.a],[2,ve.a]],null,null),(e()(),s._24(1,["\n  "])),(e()(),s._5(0,null,1,1,"p",[["style","color:red;z-index:100000"]],null,null,null,null,null)),(e()(),s._24(null,["",""])),(e()(),s._24(1,["\n  \n"])),(e()(),s._24(null,["\n"])),(e()(),s._5(0,null,null,3,"ion-footer",[],null,null,null,null,null)),s._3(16384,null,0,Ae.a,[ge.a,s.k,s.D,[2,he.a]],null,null),(e()(),s._24(null,["\n  "])),(e()(),s._24(null,["\n"])),(e()(),s._24(null,["\n"]))],null,function(e,n){var t=n.component;e(n,1,0,s._19(n,2).statusbarPadding,s._19(n,2)._hasRefresher),e(n,5,0,t.fpsText)})}function r(e){return s._25(0,[s._22(402653184,1,{content:0}),(e()(),s._5(0,[[1,0]],null,5,"ion-content",[["class","no-scroll"]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],[["window","resize"]],function(e,n,t){var o=!0;return"window:resize"===n&&(o=!1!==s._19(e,2).resize()&&o),o},xe.b,xe.a)),s._3(4374528,[["mainContent",4]],0,je.a,[ge.a,_e.a,ke.a,s.k,s.D,me.a,Ee.a,s.x,[2,he.a],[2,ve.a]],null,null),(e()(),s._24(1,["\n  "])),(e()(),s._5(0,null,1,1,"p",[["style","color:red;z-index:100000"]],null,null,null,null,null)),(e()(),s._24(null,["",""])),(e()(),s._24(1,["\n  \n"]))],null,function(e,n){var t=n.component;e(n,1,0,s._19(n,2).statusbarPadding,s._19(n,2)._hasRefresher),e(n,5,0,t.fpsText)})}function l(e){return s._25(0,[s._22(402653184,1,{content:0}),(e()(),s._5(0,[[1,0]],null,8,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],[["window","resize"]],function(e,n,t){var o=!0;return"window:resize"===n&&(o=!1!==s._19(e,2).resize()&&o),o},xe.b,xe.a)),s._3(4374528,[["JsexContent",4]],0,je.a,[ge.a,_e.a,ke.a,s.k,s.D,me.a,Ee.a,s.x,[2,he.a],[2,ve.a]],null,null),(e()(),s._24(1,["\n  "])),(e()(),s._24(1,["\n  "])),(e()(),s._24(1,["\n"])),(e()(),s._5(0,null,1,1,"p",[["style","color:red;z-index:100000"]],null,null,null,null,null)),(e()(),s._24(null,["",""])),(e()(),s._24(1,["\n  "])),(e()(),s._24(1,["\n"])),(e()(),s._24(null,["\n"]))],null,function(e,n){var t=n.component;e(n,1,0,s._19(n,2).statusbarPadding,s._19(n,2)._hasRefresher),e(n,7,0,t.fpsText)})}Object.defineProperty(n,"__esModule",{value:!0});var c=t(40),s=t(0),d=t(6),u=t(41),p=(t(276),t(135)),f=t.n(p),h=t(88),v=t(136),m=function(){function e(e){this.plt=e,this.stats=new f.a,this.fpsText="",this.mobilePlatform=!1,this.width=640,this.height=480,console.log("WxH: "+this.width+"x"+this.height);var n=this.plt.platforms();console.log("plt",n)}return e.prototype.ngOnInit=function(){console.log("ngOnInit arservice")},e.prototype.getDeviceId=function(e){var n=this;return e?(console.log("oldId"),navigator.mediaDevices.enumerateDevices().then(function(t){console.log("cam info",t);var o=[];return t.forEach(function(n){if(n.kind){var t=n.kind.match(/video|videoinput/);null===t&&void 0===t||n.deviceId===e||o.push(n.deviceId)}}),n.deviceId=o[1]?o[1]:o[0],n.deviceId})):navigator.mediaDevices.enumerateDevices().then(function(e){console.log("cam info",e);var t="unkwn";return e.forEach(function(e){if(e.label){var o=e.label.match(/back|rear/);null===o&&void 0===o||(n.deviceId=t=e.deviceId)}}),console.log(t),null!==t&&void 0!==t&&"unkwn"!==t||(console.log("Inside if in getdeviceid"),e.forEach(function(e){if(e.kind){var o=e.kind.match(/video|videoinput/);null===o&&void 0===o||(n.deviceId=t=e.deviceId)}})),t})},e.prototype.trackMarker=function(e,n,t,o){var a=n.createThreeBarcodeMarker(t,1);a.add(o),e.scene.add(a)},e.prototype.trackManualMarker=function(e,n,t,o){n.loadMarker("/assets/data/patt.hiro",function(t){console.log("marker uuid",t);var a=n.createThreeMarker(t);console.log("Marker root",a),a.add(o),e.scene.add(a)})},e.prototype.createWebGLRenderer=function(e,n,t,o){var a=new h.WebGLRenderer({alpha:!0});a.setClearColor(new h.Color("lightgrey"),0),console.log("orientation",t.orientation);var i=Math.min(window.innerWidth/o.video.videoWidth,window.innerHeight/o.video.videoHeight),r=i*o.video.videoWidth,l=i*o.video.videoHeight;return"portrait"===t.orientation?(a.setSize(l,r),a.domElement.style.transformOrigin="0 0",a.domElement.style.transform="rotate(-90deg) translateX(-100%)"):a.setSize(r,l),a.domElement.style.position="absolute",a.domElement.style.top="0px",a.domElement.style.left="0px",a},e.prototype.createARParameters=function(e,n,t){var o=this,a=window.innerWidth,i=window.innerHeight,r={video:{deviceId:e}},l=v.ARController.getUserMediaThreeScene({width:window.innerWidth,height:window.innerHeight,maxARVideoSize:1080,cameraConfig:r,cameraParam:"assets/data/camera_para.dat",onSuccess:function(e,r,c){r.setPatternDetectionMode(v.artoolkit.AR_TEMPLATE_MATCHING_COLOR);var s=o.createWebGLRenderer(a,i,r,e);t.listen("document","click",function(e){console.log("ng Clicked")}),t.appendChild(n.nativeElement,l),t.appendChild(n.nativeElement,s.domElement);var d=o.createIcosahedron(),u=o.createTorus();o.trackManualMarker(e,r,5,d);var p,f,h,m=0,g=function(){u.rotation.x+=.1,d.rotation.y+=.1,o.stats.update(),requestAnimationFrame(g),h=void 0-void 0%p,e.process(),e.renderOn(s);var n=void 0-f,t=Math.round(1e3/(n/++m)*100)/100;o.fpsText="Elapsed time= "+Math.round(n/1e3*100)/100+" secs @"+t+" fps."};p=1e3/120,h=Date.now(),f=h,g()}})},e.prototype.appendStatisticsScreen=function(e,n){try{n.appendChild(e.nativeElement,this.stats.dom)}catch(e){console.log("Error in appendStatisticsScreen",e)}},e.prototype.incrementXAngle=function(e){e.rotation.x+=5},e.prototype.createCube=function(){var e=new h.Mesh(new h.BoxGeometry(1,1,1),new h.MeshNormalMaterial);return e.material.shading=h.FlatShading,e.position.z=.5,e},e.prototype.createIcosahedron=function(){var e=new h.Mesh(new h.IcosahedronGeometry(.7,1),new h.MeshNormalMaterial);return e.material.shading=h.FlatShading,e.position.z=.7,e},e.prototype.createTorus=function(){var e=new h.TorusKnotGeometry(.3,.1,64,16),n=new h.MeshNormalMaterial,t=new h.Mesh(e,n);return t.scale.x=2,t.scale.y=2,t.scale.z=2,t.position.y=.5,t},e.prototype.createAvatar=function(e){console.log("Starting avatar 20");var n=new h.LoadingManager;n.onLoad=function(){console.log("Loading started!");try{var e=window.speechSynthesis,n=new SpeechSynthesisUtterance("Hey Ya Boy, Whats up.");e.speak(n)}catch(e){console.log("error in speaking",e)}},n.onError=function(){console.log("Error in loding res")},n.onProgress=function(e,n,t){console.log("Loading file: "+e+".\nLoaded "+n+" of "+t+" files.")};var t=new h.ObjectLoader(n),o=new h.MeshNormalMaterial;console.log("Object oader",t,"material",o),t.load("assets/avatar/legoboy.json",function(n){console.log("Avatar Loaded",n),n.traverse(function(e){e instanceof h.Mesh&&(console.log("inside child"),e.material=o,e.material.shading=h.FlatShading)}),n.rotation.x=Math.PI/2,n.position.z=.5,n.scale.x=.7,n.scale.y=.7,n.scale.z=.7,console.log("positionobj x:",n.position.x,"y",n.position.y,"z",n.position.z),e(n)})},e}();m=Object(d.__decorate)([Object(s.o)(),Object(d.__metadata)("design:paramtypes",["function"==typeof(g=void 0!==u.f&&u.f)&&g||Object])],m);var g,_=function(){function e(e,n,t,o,a,i,r){this.plt=e,this.navCtrl=n,this.ngRenderer=t,this.ngZone=o,this.elementRef=a,this.arApi=i,this.navParams=r,this.fpsText="",this.mobilePlatform=!1}return e.prototype.ngOnInit=function(){console.log("ngOnInit");var e=this.plt.platforms();console.log("plt",e)},e.prototype.ngAfterViewInit=function(){console.log("Content",this.content),this.deviceId=this.navParams.get("id"),console.log("dev id on demo 2",this.deviceId),this.arApi.createARParameters(this.deviceId,this.content,this.ngRenderer),this.arApi.appendStatisticsScreen(this.content,this.ngRenderer)},e.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad Demo2Page")},e}();Object(d.__decorate)([Object(s.M)("mainContent",{read:s.k}),Object(d.__metadata)("design:type","function"==typeof(y=void 0!==s.k&&s.k)&&y||Object)],_.prototype,"content",void 0),_=Object(d.__decorate)([Object(s.i)({selector:"page-demo2",templateUrl:"demo2.html"}),Object(d.__metadata)("design:paramtypes",["function"==typeof(w=void 0!==u.f&&u.f)&&w||Object,"function"==typeof(b=void 0!==u.d&&u.d)&&b||Object,"function"==typeof(k=void 0!==s.E&&s.E)&&k||Object,"function"==typeof(M=void 0!==s.x&&s.x)&&M||Object,"function"==typeof(O=void 0!==s.k&&s.k)&&O||Object,"function"==typeof(x=void 0!==m&&m)&&x||Object,"function"==typeof(j=void 0!==u.e&&u.e)&&j||Object])],_);var y,w,b,k,M,O,x,j,E=function(){function e(e,n,t,o,a,i){this.plt=e,this.navCtrl=n,this.ngRenderer=t,this.ngZone=o,this.elementRef=a,this.arApi=i,this.deviceId="",this.fpsText="",this.mobilePlatform=!1}return e.prototype.ngOnInit=function(){console.log("ngOnInit");var e=this.plt.platforms();console.log("plt",e)},e.prototype.ngAfterViewInit=function(){var e=this;console.log("Content",this.content),this.arApi.getDeviceId().then(function(n){e.deviceId=n,console.log("device",e.deviceId),e.arApi.createARParameters(n,e.content,e.ngRenderer),e.arApi.appendStatisticsScreen(e.content,e.ngRenderer)})},e.prototype.changeCamera=function(){var e=this;console.log("Changing camera"),this.arApi.getDeviceId(this.deviceId).then(function(n){e.navCtrl.setRoot(_,{id:n})})},e}();Object(d.__decorate)([Object(s.M)("mainContent",{read:s.k}),Object(d.__metadata)("design:type","function"==typeof(I=void 0!==s.k&&s.k)&&I||Object)],E.prototype,"content",void 0),E=Object(d.__decorate)([Object(s.i)({selector:"page-demo",templateUrl:"demo.html"}),Object(d.__metadata)("design:paramtypes",["function"==typeof(R=void 0!==u.f&&u.f)&&R||Object,"function"==typeof(A=void 0!==u.d&&u.d)&&A||Object,"function"==typeof(C=void 0!==s.E&&s.E)&&C||Object,"function"==typeof(S=void 0!==s.x&&s.x)&&S||Object,"function"==typeof(D=void 0!==s.k&&s.k)&&D||Object,"function"==typeof(P=void 0!==m&&m)&&P||Object])],E);var I,R,A,C,S,D,P,T=function(){return function(e){this.rootPage=E,e.ready().then(function(){window.URL=window.URL||window.webkitURL,window.MediaDevices=window.MediaDevices||navigator.getUserMedia})}}();T=Object(d.__decorate)([Object(s.i)({templateUrl:"app.html"}),Object(d.__metadata)("design:paramtypes",["function"==typeof(z=void 0!==u.f&&u.f)&&z||Object])],T);var z,L=this&&this.__awaiter||function(e,n,t,o){return new(t||(t=Promise))(function(a,i){function r(e){try{c(o.next(e))}catch(e){i(e)}}function l(e){try{c(o.throw(e))}catch(e){i(e)}}function c(e){e.done?a(e.value):new t(function(n){n(e.value)}).then(r,l)}c((o=o.apply(e,n||[])).next())})},W=this&&this.__generator||function(e,n){function t(e){return function(n){return o([e,n])}}function o(t){if(a)throw new TypeError("Generator is already executing.");for(;c;)try{if(a=1,i&&(r=i[2&t[0]?"return":t[0]?"throw":"next"])&&!(r=r.call(i,t[1])).done)return r;switch(i=0,r&&(t=[0,r.value]),t[0]){case 0:case 1:r=t;break;case 4:return c.label++,{value:t[1],done:!1};case 5:c.label++,i=t[1],t=[0];continue;case 7:t=c.ops.pop(),c.trys.pop();continue;default:if(r=c.trys,!(r=r.length>0&&r[r.length-1])&&(6===t[0]||2===t[0])){c=0;continue}if(3===t[0]&&(!r||t[1]>r[0]&&t[1]<r[3])){c.label=t[1];break}if(6===t[0]&&c.label<r[1]){c.label=r[1],r=t;break}if(r&&c.label<r[2]){c.label=r[2],c.ops.push(t);break}r[2]&&c.ops.pop(),c.trys.pop();continue}t=n.call(e,c)}catch(e){t=[6,e],i=0}finally{a=r=0}if(5&t[0])throw t[1];return{value:t[0]?t[1]:void 0,done:!0}}var a,i,r,l,c={label:0,sent:function(){if(1&r[0])throw r[1];return r[1]},trys:[],ops:[]};return l={next:t(0),throw:t(1),return:t(2)},"function"==typeof Symbol&&(l[Symbol.iterator]=function(){return this}),l},H=function(){function e(e,n,t,o,a){this.navCtrl=n,this.ngRenderer=t,this.ngZone=o,this.elementRef=a,this.stats=new f.a,this.fpsText="",this.width=640,this.height=480,console.log("WxH: "+this.width+"x"+this.height)}return e.prototype.ngOnInit=function(){console.log("ngOnInit")},e.prototype.ngAfterViewInit=function(){console.log("Content",this.content),this.createARParameters(),this.appendStatisticsScreen(this.content)},e.prototype.getDeviceId=function(){return navigator.mediaDevices.enumerateDevices().then(function(e){console.log("cam info",e);var n="unkwn";return e.forEach(function(e){if(e.label){var t=e.label.match(/back|rear/);null===t&&void 0===t||(n=e.deviceId)}}),console.log(n),null!==n&&void 0!==n&&"unkwn"!==n||(console.log("Inside if in getdeviceid"),e.forEach(function(e){if(e.kind){var t=e.kind.match(/video|videoinput/);null===t&&void 0===t||(n=e.deviceId)}})),n})},e.prototype.trackMarker=function(e,n,t,o){var a=n.createThreeBarcodeMarker(t,1);a.add(o),e.scene.add(a)},e.prototype.createWebGLRenderer=function(e,n,t,o){var a=new h.WebGLRenderer({alpha:!0});a.setClearColor(new h.Color("lightgrey"),0),console.log("orientation",t.orientation);var i=Math.min(window.innerWidth/o.video.videoWidth,window.innerHeight/o.video.videoHeight),r=i*o.video.videoWidth,l=i*o.video.videoHeight;return"portrait"===t.orientation?(a.setSize(l,r),a.domElement.style.transformOrigin="0 0",a.domElement.style.transform="rotate(-90deg) translateX(-100%)"):a.setSize(r,l),a.domElement.style.position="absolute",a.domElement.style.top="0px",a.domElement.style.left="0px",a},e.prototype.startRendering=function(e){var n=this,t=this.width,o=this.height;("MediaDevices"in window||navigator.getUserMedia)&&this.getDeviceId().then(function(a){console.log("dev id",a),n.deviceId=a,v.ARController.getUserMediaThreeScene({maxARVideoSize:640,cameraConfig:{video:{deviceId:n.deviceId}},cameraParam:"assets/data/camera_para.dat",onSuccess:function(a,i,r){i.setPatternDetectionMode(v.artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);var l=n.createWebGLRenderer(t,o,i,a),c=0;l.domElement.addEventListener("click",function(e){console.log("Inside click"),e.preventDefault(),c+=1},!1);try{n.ngRenderer.appendChild(e.nativeElement,l.domElement)}catch(e){console.log("Error in startRendering",e)}var s=n.createIcosahedron();n.createAvatar(function(e){console.log("Callback returned",e),n.trackMarker(a,i,5,e)}),n.trackMarker(a,i,20,s);var d=function(){n.stats.update(),n.ngZone.runOutsideAngular(function(){a.process(),a.renderOn(l),requestAnimationFrame(d)})};d()}})})},e.prototype.renderVideoStream=function(e){var n=this;this.getDeviceId().then(function(t){navigator.mediaDevices.getUserMedia({video:{deviceId:t}}).then(function(t){var o=n.ngRenderer.createElement("video");o.setAttribute("autoplay",""),o.setAttribute("muted",""),o.setAttribute("playsinline",""),o.style.width=window.innerWidth+"px",o.style.height=window.innerHeight+"px",o.srcObject=t,document.body.addEventListener("click",function(){o.play()}),n.ngRenderer.appendChild(e.nativeElement,o),o.onload=function(t){console.log("Video Elem Loaded",t),n.ngRenderer.appendChild(e.nativeElement,o)},n.createScene()})})},e.prototype.createARParameters=function(){var e=this,n=window.innerWidth,t=window.innerHeight;this.getDeviceId().then(function(o){console.log("dev id",o),e.deviceId=o;var a={video:{deviceId:e.deviceId}},i=v.ARController.getUserMediaThreeScene({width:window.innerWidth,height:window.innerHeight,maxARVideoSize:1080,cameraConfig:a,cameraParam:"assets/data/camera_para.dat",onSuccess:function(o,a,r){e.ngRenderer.appendChild(e.content.nativeElement,i),a.setPatternDetectionMode(v.artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);var l=e.createWebGLRenderer(n,t,a,o);e.ngRenderer.listen("document","click",function(e){console.log("ng Clicked")}),e.ngRenderer.appendChild(e.content.nativeElement,l.domElement),console.log("elref",e.elementRef.nativeElement);var c=e.createIcosahedron(),s=e.createTorus();e.trackMarker(o,a,5,c),e.trackMarker(o,a,20,s);var d,u,p,f,h,m=0,g=function(){if(s.rotation.x+=.1,c.rotation.y+=.1,e.stats.update(),requestAnimationFrame(g),p=Date.now(),(h=p-f)>d){f=p-h%d,o.process(),o.renderOn(l);var n=p-u,t=Math.round(1e3/(n/++m)*100)/100;e.fpsText="Elapsed time= "+Math.round(n/1e3*100)/100+" secs @"+t+" fps."}};d=1e3/60,f=Date.now(),u=f,g()}})})},e.prototype.createScene=function(){return L(this,void 0,void 0,function(){var e,n,t,o=this;return W(this,function(a){return e=new h.Scene,n=new h.Camera,t=new v.ARCameraParam,t.onload=function(){return L(o,void 0,void 0,function(){var t,o,a,i,r,l,c,s,d,u,p,f,m,g,_,y,w,b=this;return W(this,function(k){switch(k.label){case 0:return console.log("Camera loaded"),(void 0).setPatternDetectionMode(v.artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX),t=(void 0).getCameraMatrix(),o=(new h.Matrix4).fromArray(t),(a=new h.Matrix4).multiply((new h.Matrix4).makeRotationY(Math.PI)),a.multiply((new h.Matrix4).makeRotationZ(Math.PI)),o.multiply(a),e.add(n),n.matrixAutoUpdate=!1,n.projectionMatrix.elements.set(o.toArray()),i=this.createIcosahedron(),r=this.trackMarker({},void 0,5,i),l=new h.Group,c=this.createWebGLRenderer(window.innerWidth,window.innerHeight,void 0,e),this.ngRenderer.appendChild(this.content.nativeElement,c.domElement),s=60,g=0,_=function(){if(b.stats.update(),requestAnimationFrame(_),p=Date.now(),(m=p-f)>d){++g,f=p-m%d,c.render(e,n);var t=p-u,o=Math.round(1e3/(t/g)*100)/100;b.fpsText="Elapsed time= "+Math.round(t/1e3*100)/100+" secs @"+o+" fps."}},d=1e3/s,f=Date.now(),u=f,_(),y=this,[4,this.getDeviceId()];case 1:return y.deviceId=k.sent(),w={video:{deviceId:this.deviceId}},[2]}})})},t.load("assets/data/camera_para.dat"),[2]})})},e.prototype.process=function(){},e.prototype.appendStatisticsScreen=function(e){try{this.ngRenderer.appendChild(e.nativeElement,this.stats.dom)}catch(e){console.log("Error in appendStatisticsScreen",e)}},e.prototype.incrementXAngle=function(e){e.rotation.x+=5},e.prototype.createCube=function(){var e=new h.Mesh(new h.BoxGeometry(1,1,1),new h.MeshNormalMaterial);return e.material.shading=h.FlatShading,e.position.z=.5,e},e.prototype.createIcosahedron=function(){var e=new h.Mesh(new h.IcosahedronGeometry(.7,1),new h.MeshNormalMaterial);return e.material.shading=h.FlatShading,e.position.z=.7,e},e.prototype.createTorus=function(){var e=new h.TorusKnotGeometry(.3,.1,64,16),n=new h.MeshNormalMaterial,t=new h.Mesh(e,n);return t.scale.x=2,t.scale.y=2,t.scale.z=2,t.position.y=.5,t},e.prototype.createAvatar=function(e){console.log("Starting avatar 20");var n=new h.LoadingManager;n.onLoad=function(){console.log("Loading started!");try{var e=window.speechSynthesis,n=new SpeechSynthesisUtterance("Hey Ya Boy, Whats up.");e.speak(n)}catch(e){console.log("error in speaking",e)}},n.onError=function(){console.log("Error in loding res")},n.onProgress=function(e,n,t){console.log("Loading file: "+e+".\nLoaded "+n+" of "+t+" files.")};var t=new h.ObjectLoader(n),o=new h.MeshNormalMaterial;console.log("Object oader",t,"material",o),t.load("assets/avatar/legoboy.json",function(n){console.log("Avatar Loaded",n),n.traverse(function(e){e instanceof h.Mesh&&(console.log("inside child"),e.material=o,e.material.shading=h.FlatShading)}),n.rotation.x=Math.PI/2,n.position.z=.5,n.scale.x=.7,n.scale.y=.7,n.scale.z=.7,console.log("positionobj x:",n.position.x,"y",n.position.y,"z",n.position.z),e(n)})},e}();Object(d.__decorate)([Object(s.M)("mainContent",{read:s.k}),Object(d.__metadata)("design:type","function"==typeof(G=void 0!==s.k&&s.k)&&G||Object)],H.prototype,"content",void 0),H=Object(d.__decorate)([Object(s.i)({selector:"page-home",templateUrl:"home.html"}),Object(d.__metadata)("design:paramtypes",["function"==typeof(N=void 0!==u.f&&u.f)&&N||Object,"function"==typeof(U=void 0!==u.d&&u.d)&&U||Object,"function"==typeof(F=void 0!==s.E&&s.E)&&F||Object,"function"==typeof(V=void 0!==s.x&&s.x)&&V||Object,"function"==typeof(q=void 0!==s.k&&s.k)&&q||Object])],H);var G,N,U,F,V,q,B=t(253),X=this&&this.__awaiter||function(e,n,t,o){return new(t||(t=Promise))(function(a,i){function r(e){try{c(o.next(e))}catch(e){i(e)}}function l(e){try{c(o.throw(e))}catch(e){i(e)}}function c(e){e.done?a(e.value):new t(function(n){n(e.value)}).then(r,l)}c((o=o.apply(e,n||[])).next())})},Z=this&&this.__generator||function(e,n){function t(e){return function(n){return o([e,n])}}function o(t){if(a)throw new TypeError("Generator is already executing.");for(;c;)try{if(a=1,i&&(r=i[2&t[0]?"return":t[0]?"throw":"next"])&&!(r=r.call(i,t[1])).done)return r;switch(i=0,r&&(t=[0,r.value]),t[0]){case 0:case 1:r=t;break;case 4:return c.label++,{value:t[1],done:!1};case 5:c.label++,i=t[1],t=[0];continue;case 7:t=c.ops.pop(),c.trys.pop();continue;default:if(r=c.trys,!(r=r.length>0&&r[r.length-1])&&(6===t[0]||2===t[0])){c=0;continue}if(3===t[0]&&(!r||t[1]>r[0]&&t[1]<r[3])){c.label=t[1];break}if(6===t[0]&&c.label<r[1]){c.label=r[1],r=t;break}if(r&&c.label<r[2]){c.label=r[2],c.ops.push(t);break}r[2]&&c.ops.pop(),c.trys.pop();continue}t=n.call(e,c)}catch(e){t=[6,e],i=0}finally{a=r=0}if(5&t[0])throw t[1];return{value:t[0]?t[1]:void 0,done:!0}}var a,i,r,l,c={label:0,sent:function(){if(1&r[0])throw r[1];return r[1]},trys:[],ops:[]};return l={next:t(0),throw:t(1),return:t(2)},"function"==typeof Symbol&&(l[Symbol.iterator]=function(){return this}),l},J=function(){function e(e,n,t){this.navCtrl=e,this.navParams=n,this.ngRenderer=t}return e.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad JsexPage")},e.prototype.ngOnInit=function(){this.startAR()},e.prototype.getDeviceId=function(){return navigator.mediaDevices.enumerateDevices().then(function(e){console.log("cam info",e);var n="unkwn";return e.forEach(function(e){if(e.label){var t=e.label.match(/back|rear/);null===t&&void 0===t||(n=e.deviceId)}}),console.log(n),null!==n&&void 0!==n&&"unkwn"!==n||(console.log("Inside if in getdeviceid"),e.forEach(function(e){if(e.kind){var t=e.kind.match(/video|videoinput/);null===t&&void 0===t||(n=e.deviceId)}})),n})},e.prototype.startAR=function(){return X(this,void 0,void 0,function(){var e,n,t=this;return Z(this,function(o){switch(o.label){case 0:return[4,this.getDeviceId()];case 1:return e=o.sent(),n={video:{deviceId:e}},v.ARController.getUserMediaThreeScene({maxARVideoSize:320,cameraParam:"assets/data/camera_para.dat",cameraConfig:n,onSuccess:function(e,n,o){t.content.nativeElement.className=n.orientation,n.setPatternDetectionMode(v.artoolkit.AR_MATRIX_CODE_DETECTION);var a=new h.WebGLRenderer({antialias:!0});if("portrait"===n.orientation){var i=window.innerWidth/n.videoHeight*n.videoWidth,r=window.innerWidth;a.setSize(i,r),a.domElement.style.paddingBottom=i-r+"px"}else/Android|mobile|iPad|iPhone/i.test(navigator.userAgent)?a.setSize(window.innerWidth,window.innerWidth/n.videoWidth*n.videoHeight):(a.setSize(n.videoWidth,n.videoHeight),document.body.className+=" desktop");t.ngRenderer.appendChild(t.content.nativeElement,a.domElement);var l=n.createThreeBarcodeMarker(20),c=new h.Mesh(new h.SphereGeometry(.5,8,8),new h.MeshNormalMaterial);c.material.shading=h.FlatShading,c.position.z=.5,l.add(c),e.scene.add(l);var s=0,d=0;a.domElement.addEventListener("click",function(e){e.preventDefault(),d+=1},!1);var u=new f.a;t.ngRenderer.insertBefore(t.content.nativeElement,u.dom,u);var p=function(){u.update(),e.process(),e.renderOn(a),c.rotation.z+=s+=.05*(d-c.rotation.z),s*=.8,requestAnimationFrame(p)};p()}}),[2]}})})},e}();Object(d.__decorate)([Object(s.M)("JsexContent",{read:s.k}),Object(d.__metadata)("design:type","function"==typeof(K=void 0!==s.k&&s.k)&&K||Object)],J.prototype,"content",void 0),J=Object(d.__decorate)([Object(s.i)({selector:"page-jsex",templateUrl:"jsex.html"}),Object(d.__metadata)("design:paramtypes",["function"==typeof(Y=void 0!==u.d&&u.d)&&Y||Object,"function"==typeof(Q=void 0!==u.e&&u.e)&&Q||Object,"function"==typeof($=void 0!==s.E&&s.E)&&$||Object])],J);var K,Y,Q,$,ee=function(){return function(){}}();ee=Object(d.__decorate)([Object(s.u)({declarations:[T,H,E,_,J],imports:[c.a,u.c.forRoot(T,{},{links:[]})],bootstrap:[u.a],entryComponents:[T,H,E,_,J],providers:[{provide:s.l,useClass:u.b},B.a,m]})],ee);var ne=t(53),te=t(367),oe=t(368),ae=t(369),ie=t(370),re=t(371),le=t(372),ce=t(373),se=t(374),de=t(375),ue=t(376),pe=t(43),fe=t(60),he=t(4),ve=t(18),me=t(8),ge=t(1),_e=t(3),ye=t(10),we=t(36),be=t(17),ke=t(9),Me=s._2({encapsulation:2,styles:[],data:{}}),Oe=s._0("ng-component",T,function(e){return s._25(0,[(e()(),s._5(0,null,null,1,"ng-component",[],null,null,null,o,Me)),s._3(49152,null,0,T,[_e.a],null,null)],null,null)},{},{},[]),xe=t(94),je=t(21),Ee=t(28),Ie=s._2({encapsulation:2,styles:[],data:{}}),Re=s._0("page-home",H,function(e){return s._25(0,[(e()(),s._5(0,null,null,1,"page-home",[],null,null,null,a,Ie)),s._3(4308992,null,0,H,[_e.a,ve.a,s.E,s.x,s.k],null,null)],function(e,n){e(n,1,0)},null)},{},{},[]),Ae=t(126),Ce=s._2({encapsulation:2,styles:[],data:{}}),Se=s._0("page-demo",E,function(e){return s._25(0,[(e()(),s._5(0,null,null,1,"page-demo",[],null,null,null,i,Ce)),s._3(4308992,null,0,E,[_e.a,ve.a,s.E,s.x,s.k,m],null,null)],function(e,n){e(n,1,0)},null)},{},{},[]),De=t(13),Pe=s._2({encapsulation:2,styles:[],data:{}}),Te=s._0("page-demo2",_,function(e){return s._25(0,[(e()(),s._5(0,null,null,1,"page-demo2",[],null,null,null,r,Pe)),s._3(4308992,null,0,_,[_e.a,ve.a,s.E,s.x,s.k,m,De.a],null,null)],function(e,n){e(n,1,0)},null)},{},{},[]),ze=s._2({encapsulation:2,styles:[],data:{}}),Le=s._0("page-jsex",J,function(e){return s._25(0,[(e()(),s._5(0,null,null,1,"page-jsex",[],null,null,null,l,ze)),s._3(114688,null,0,J,[ve.a,De.a,s.E],null,null)],function(e,n){e(n,1,0)},null)},{},{},[]),We=t(23),He=t(134),Ge=t(24),Ne=t(103),Ue=t(105),Fe=t(131),Ve=t(20),qe=t(38),Be=t(111),Xe=t(216),Ze=t(55),Je=t(48),Ke=t(113),Ye=t(75),Qe=t(118),$e=t(130),en=t(125),nn=t(215),tn=t(132),on=t(34),an=t(112),rn=t(133),ln=s._1(ee,[ne.b],function(e){return s._16([s._17(512,s.j,s.X,[[8,[te.a,oe.a,ae.a,ie.a,re.a,le.a,ce.a,se.a,de.a,Oe,Re,Se,Te,Le]],[3,s.j],s.v]),s._17(5120,s.t,s._15,[[3,s.t]]),s._17(4608,We.k,We.j,[s.t]),s._17(5120,s.b,s._6,[]),s._17(5120,s.r,s._12,[]),s._17(5120,s.s,s._13,[]),s._17(4608,c.c,c.s,[We.c]),s._17(6144,s.H,null,[c.c]),s._17(4608,c.f,He.a,[]),s._17(5120,c.d,function(e,n,t,o){return[new c.l(e),new c.p(n),new c.o(t,o)]},[We.c,We.c,We.c,c.f]),s._17(4608,c.e,c.e,[c.d,s.x]),s._17(135680,c.n,c.n,[We.c]),s._17(4608,c.m,c.m,[c.e,c.n]),s._17(6144,s.F,null,[c.m]),s._17(6144,c.q,null,[c.n]),s._17(4608,s.K,s.K,[s.x]),s._17(4608,c.h,c.h,[We.c]),s._17(4608,c.j,c.j,[We.c]),s._17(4608,Ge.k,Ge.k,[]),s._17(4608,Ge.c,Ge.c,[]),s._17(4608,Ne.a,Ne.a,[me.a,ge.a]),s._17(4608,Ue.a,Ue.a,[me.a,ge.a]),s._17(4608,Fe.a,Fe.a,[]),s._17(4608,Ve.a,Ve.a,[]),s._17(4608,qe.a,qe.a,[_e.a]),s._17(4608,Ee.a,Ee.a,[ge.a,_e.a,s.x,ke.a]),s._17(4608,Be.a,Be.a,[me.a,ge.a]),s._17(5120,We.f,Xe.b,[We.q,[2,We.a],ge.a]),s._17(4608,We.e,We.e,[We.f]),s._17(5120,Ze.b,Ze.d,[me.a,Ze.a]),s._17(5120,be.a,be.b,[me.a,Ze.b,We.e,Je.b,s.j]),s._17(4608,Ke.a,Ke.a,[me.a,ge.a,be.a]),s._17(4608,Ye.a,Ye.a,[me.a,ge.a]),s._17(4608,Qe.a,Qe.a,[me.a,ge.a,be.a]),s._17(4608,$e.a,$e.a,[ge.a,_e.a,ke.a,me.a,ye.l]),s._17(4608,en.a,en.a,[me.a,ge.a]),s._17(4608,we.a,we.a,[_e.a,ge.a]),s._17(4608,B.a,B.a,[]),s._17(4608,m,m,[_e.a]),s._17(512,We.b,We.b,[]),s._17(512,s.l,nn.a,[]),s._17(256,ge.b,{},[]),s._17(1024,tn.a,tn.b,[]),s._17(1024,_e.a,_e.b,[c.b,tn.a,s.x]),s._17(1024,ge.a,ge.c,[ge.b,_e.a]),s._17(512,ke.a,ke.a,[_e.a]),s._17(512,on.a,on.a,[]),s._17(512,me.a,me.a,[ge.a,_e.a,[2,on.a]]),s._17(512,ye.l,ye.l,[me.a]),s._17(256,Ze.a,{links:[]},[]),s._17(512,s.h,s.h,[]),s._17(512,an.a,an.a,[s.h]),s._17(1024,Je.b,Je.c,[an.a,s.q]),s._17(1024,s.c,function(e,n,t,o,a,i,r,l,s,d,u,p,f,h){return[c.r(e,n),rn.a(t),Fe.b(o,a),$e.b(i,r,l,s,d),Je.d(u,p,f,h)]},[[2,c.i],[2,s.w],ge.a,_e.a,ke.a,ge.a,_e.a,ke.a,me.a,ye.l,ge.a,Ze.a,Je.b,s.x]),s._17(512,s.d,s.d,[[2,s.c]]),s._17(131584,s._4,s._4,[s.x,s.Y,s.q,s.l,s.j,s.d]),s._17(2048,s.f,null,[s._4]),s._17(512,s.e,s.e,[s.f]),s._17(512,c.a,c.a,[[3,c.a]]),s._17(512,Ge.j,Ge.j,[]),s._17(512,Ge.d,Ge.d,[]),s._17(512,Ge.i,Ge.i,[]),s._17(512,Xe.a,Xe.a,[]),s._17(512,ee,ee,[]),s._17(256,ne.a,T,[]),s._17(256,We.a,"/",[])])});Object(s.R)(),Object(c.k)().bootstrapModuleFactory(ln)},315:function(e,n){},316:function(e,n){}},[254]);
+webpackJsonp([0],{
+
+/***/ 123:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ArengineServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(325);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_stats_js__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_stats_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_stats_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_three__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jsartoolkit5__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jsartoolkit5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jsartoolkit5__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var ArengineServiceProvider = (function () {
+    function ArengineServiceProvider(plt) {
+        this.plt = plt;
+        this.stats = new __WEBPACK_IMPORTED_MODULE_3_stats_js___default.a();
+        this.fpsText = "";
+        this.mobilePlatform = false;
+        this.width = 640; //platform.width();
+        this.height = 480; //platform.height();
+        console.log("WxH: " + this.width + "x" + this.height);
+        var platform = this.plt.platforms();
+        console.log("plt", platform);
+    }
+    ArengineServiceProvider.prototype.ngOnInit = function () {
+        console.log("ngOnInit arservice");
+    };
+    // ngAfterViewInit() {
+    // console.log("Content", this.content);
+    // this.startRendering(this.content);
+    // this.renderVideoStream(this.content);
+    // this.getDeviceId().then(id => {
+    //   this.createARParameters(id);
+    //   this.appendStatisticsScreen(this.content);
+    // });
+    // }
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                             Basic Required Functions                           ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     * Gets the device ID of the camera and
+     * chooses the rear one.
+     */
+    ArengineServiceProvider.prototype.getDeviceId = function (oldId) {
+        var _this = this;
+        if (oldId) {
+            console.log("oldId");
+            return navigator.mediaDevices.enumerateDevices().then(function (info) {
+                console.log("cam info", info);
+                var devId = [];
+                info.forEach(function (x) {
+                    if (x.kind) {
+                        var kindRegEx = x.kind.match(/video|videoinput/);
+                        if ((kindRegEx !== null || kindRegEx !== undefined) && x.deviceId !== oldId) {
+                            devId.push(x.deviceId);
+                        }
+                    }
+                });
+                _this.deviceId = devId[1] ? devId[1] : devId[0];
+                return _this.deviceId;
+            });
+        }
+        else {
+            return navigator.mediaDevices.enumerateDevices().then(function (info) {
+                console.log("cam info", info);
+                var devId = 'unkwn';
+                info.forEach(function (x) {
+                    if (x.label) {
+                        var labelRegEx = x.label.match(/back|rear/);
+                        if (labelRegEx !== null || labelRegEx !== undefined) {
+                            devId = x.deviceId;
+                            _this.deviceId = devId;
+                        }
+                    }
+                });
+                console.log(devId);
+                if (devId === null || devId === undefined || devId === 'unkwn') {
+                    console.log("Inside if in getdeviceid");
+                    info.forEach(function (x) {
+                        if (x.kind) {
+                            var kindRegEx = x.kind.match(/video|videoinput/);
+                            if (kindRegEx !== null || kindRegEx !== undefined) {
+                                devId = x.deviceId;
+                                _this.deviceId = devId;
+                            }
+                        }
+                    });
+                }
+                return devId;
+            });
+        }
+    };
+    /**
+  * Tracks markers in scene
+  * @param arScene
+  * @param arController
+  * @param markerId
+  * @param object
+  */
+    ArengineServiceProvider.prototype.trackMarker = function (arScene, arController, markerId, object) {
+        var marker = arController.createThreeBarcodeMarker(markerId, 1);
+        marker.add(object);
+        arScene.scene.add(marker);
+        // return marker
+    };
+    ArengineServiceProvider.prototype.trackManualMarker = function (arScene, arController, markerId, object) {
+        arController.loadMarker('/assets/data/patt.hiro', function (markerUID) {
+            console.log("marker uuid", markerUID);
+            var markerRoot = arController.createThreeMarker(markerUID);
+            console.log("Marker root", markerRoot);
+            markerRoot.add(object);
+            arScene.scene.add(markerRoot);
+        });
+    };
+    /**
+   * Creates on device camera
+   * @param width
+   * @param height
+   * @param arController
+   * @param arScene
+   */
+    ArengineServiceProvider.prototype.createWebGLRenderer = function (width, height, arController, arScene) {
+        var renderer = new __WEBPACK_IMPORTED_MODULE_4_three__["WebGLRenderer"]({
+            // antialias: true,
+            alpha: true
+        });
+        renderer.setClearColor(new __WEBPACK_IMPORTED_MODULE_4_three__["Color"]('lightgrey'), 0);
+        console.log("orientation", arController.orientation);
+        var f = Math.min(window.innerWidth / arScene.video.videoWidth, window.innerHeight / arScene.video.videoHeight);
+        var w = f * arScene.video.videoWidth;
+        var h = f * arScene.video.videoHeight;
+        if (arController.orientation === 'portrait') {
+            renderer.setSize(h, w);
+            renderer.domElement.style.transformOrigin = '0 0';
+            renderer.domElement.style.transform = 'rotate(-90deg) translateX(-100%)';
+        }
+        else {
+            renderer.setSize(w, h);
+        }
+        renderer.domElement.style.position = 'absolute';
+        renderer.domElement.style.top = '0px';
+        renderer.domElement.style.left = '0px';
+        // renderer.render(Scene,Camera)
+        return renderer;
+    };
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                              Video Based Rendering                            ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     * Create camera, scene and arcontroller manually
+     * MAIN
+     */
+    ArengineServiceProvider.prototype.createARParameters = function (id, content, ngRenderer) {
+        var _this = this;
+        var vw = window.innerWidth;
+        var vh = window.innerHeight;
+        var camConfig = { video: { deviceId: id } };
+        var successFn = function (arScene, arController, arCamera) {
+            // arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
+            arController.setPatternDetectionMode(__WEBPACK_IMPORTED_MODULE_5_jsartoolkit5__["artoolkit"].AR_TEMPLATE_MATCHING_COLOR);
+            // arController.setMarkerInfoDir(1, 'assets/data/pattern-marker.patt');
+            var renderer = _this.createWebGLRenderer(vw, vh, arController, arScene);
+            // click event
+            ngRenderer.listen('document', 'click', function (ev) {
+                console.log("ng Clicked");
+            });
+            ngRenderer.appendChild(content.nativeElement, videoOut);
+            ngRenderer.appendChild(content.nativeElement, renderer.domElement);
+            // console.log("elref", elementRef.nativeElement.querySelector('video'));
+            var icosahedron = _this.createIcosahedron();
+            var torus = _this.createTorus();
+            // this.createAvatar((object) => {
+            //     console.log("Callback returned", object);
+            //     this.trackMarker(arScene, arController, 5, object);
+            // });
+            // this.trackMarker(arScene, arController, 5, icosahedron);
+            // this.trackMarker(arScene, arController, 20, torus);
+            _this.trackManualMarker(arScene, arController, 5, icosahedron);
+            var stop = false;
+            var frameCount = 0;
+            // let $results = $("#results");
+            var fps = 120, fpsInterval, startTime, now, then, elapsed, count = 0;
+            var updateRendering = function () {
+                // console.log("Inside tick");
+                // let time = performance.now() / 1000;
+                torus.rotation.x += 0.1;
+                icosahedron.rotation.y += 0.1;
+                _this.stats.update();
+                // this.ngZone.runOutsideAngular(() => {
+                requestAnimationFrame(updateRendering);
+                now = Date.now();
+                elapsed = now - then;
+                if (elapsed > fpsInterval) {
+                    then = now - (elapsed % fpsInterval);
+                    arScene.process();
+                    arScene.renderOn(renderer);
+                    var sinceStart = now - startTime;
+                    var currentFps = Math.round(1000 / (sinceStart / ++count) * 100) / 100;
+                    _this.fpsText = "Elapsed time= " + Math.round(sinceStart / 1000 * 100) / 100 + " secs @" + currentFps + " fps.";
+                }
+                // });
+            };
+            fpsInterval = 1000 / fps;
+            then = Date.now();
+            startTime = then;
+            updateRendering();
+        };
+        var videoOut = __WEBPACK_IMPORTED_MODULE_5_jsartoolkit5__["ARController"].getUserMediaThreeScene({
+            width: window.innerWidth,
+            height: window.innerHeight,
+            maxARVideoSize: 1080,
+            cameraConfig: camConfig,
+            cameraParam: 'assets/data/camera_para.dat',
+            onSuccess: successFn,
+        });
+    };
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                              Performance Statics                                ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     * Append Frame stats on screen
+     */
+    ArengineServiceProvider.prototype.appendStatisticsScreen = function (content, ngRenderer) {
+        // this.stats.showPanel(1);
+        try {
+            ngRenderer.appendChild(content.nativeElement, this.stats.dom);
+        }
+        catch (ex) {
+            console.log("Error in appendStatisticsScreen", ex);
+        }
+    };
+    /**
+     * Increments the angle of x axis of the object.
+     * @param object
+     */
+    ArengineServiceProvider.prototype.incrementXAngle = function (object) {
+        object.rotation.x += 5;
+    };
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                                    3D Objects                                  ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+   * Creates Simple Cube
+   */
+    ArengineServiceProvider.prototype.createCube = function () {
+        var cube = new __WEBPACK_IMPORTED_MODULE_4_three__["Mesh"](new __WEBPACK_IMPORTED_MODULE_4_three__["BoxGeometry"](1, 1, 1), new __WEBPACK_IMPORTED_MODULE_4_three__["MeshNormalMaterial"]());
+        var m = cube.material;
+        m.shading = __WEBPACK_IMPORTED_MODULE_4_three__["FlatShading"];
+        // cube.material.shading = FlatShading;
+        cube.position.z = 0.5;
+        return cube;
+    };
+    /**
+     * Creates Sphere
+     */
+    ArengineServiceProvider.prototype.createIcosahedron = function () {
+        var icosahedron = new __WEBPACK_IMPORTED_MODULE_4_three__["Mesh"](new __WEBPACK_IMPORTED_MODULE_4_three__["IcosahedronGeometry"](0.7, 1), new __WEBPACK_IMPORTED_MODULE_4_three__["MeshNormalMaterial"]());
+        var m = icosahedron.material;
+        m.shading = __WEBPACK_IMPORTED_MODULE_4_three__["FlatShading"];
+        // icosahedron.material.shading = FlatShading;
+        icosahedron.position.z = 0.7;
+        return icosahedron;
+    };
+    ArengineServiceProvider.prototype.createTorus = function () {
+        var geometry = new __WEBPACK_IMPORTED_MODULE_4_three__["TorusKnotGeometry"](0.3, 0.1, 64, 16);
+        var material = new __WEBPACK_IMPORTED_MODULE_4_three__["MeshNormalMaterial"]();
+        var mesh = new __WEBPACK_IMPORTED_MODULE_4_three__["Mesh"](geometry, material);
+        mesh.scale.x = 2;
+        mesh.scale.y = 2;
+        mesh.scale.z = 2;
+        mesh.position.y = 0.5;
+        return mesh;
+    };
+    /**
+     * Creates custom object Avatar
+     * NOTE: You need ot have the object in json
+     * that will be parsed by teh JSON loader.
+     * .OBJ files can be converted to .JSON
+     * in three.js editor.
+     */
+    ArengineServiceProvider.prototype.createAvatar = function (callback) {
+        console.log("Starting avatar 20");
+        var manager = new __WEBPACK_IMPORTED_MODULE_4_three__["LoadingManager"]();
+        manager.onLoad = function () {
+            console.log('Loading started!');
+            try {
+                var speech = window.speechSynthesis;
+                // let speech = new window.speechSynthesis;
+                var speak = new SpeechSynthesisUtterance('Hey Ya Boy, Whats up.');
+                speech.speak(speak);
+            }
+            catch (ex) {
+                console.log("error in speaking", ex);
+            }
+        };
+        manager.onError = function () {
+            console.log("Error in loding res");
+        };
+        manager.onProgress = function (url, itemsLoaded, itemsTotal) {
+            console.log('Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.');
+        };
+        var objLoader = new __WEBPACK_IMPORTED_MODULE_4_three__["ObjectLoader"](manager);
+        var material = new __WEBPACK_IMPORTED_MODULE_4_three__["MeshNormalMaterial"]();
+        console.log("Object oader", objLoader, "material", material);
+        objLoader.load('assets/avatar/legoboy.json', function (obj) {
+            console.log("Avatar Loaded", obj);
+            // let mesh = new Mesh(object, material); 
+            obj.traverse(function (child) {
+                if (child instanceof __WEBPACK_IMPORTED_MODULE_4_three__["Mesh"]) {
+                    console.log("inside child");
+                    child.material = material;
+                    child.material.shading = __WEBPACK_IMPORTED_MODULE_4_three__["FlatShading"];
+                }
+            });
+            //Rotation angle is in radians
+            // Formula will be pi/2 for 90 deg
+            obj.rotation.x = Math.PI / 2;
+            obj.position.z = 0.5;
+            obj.scale.x = 0.7;
+            obj.scale.y = 0.7;
+            obj.scale.z = 0.7;
+            console.log('positionobj x:', obj.position.x, 'y', obj.position.y, 'z', obj.position.z);
+            callback(obj);
+        });
+    };
+    return ArengineServiceProvider;
+}());
+ArengineServiceProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* Platform */]])
+], ArengineServiceProvider);
+
+//# sourceMappingURL=arengine-service.js.map
+
+/***/ }),
+
+/***/ 145:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 145;
+
+/***/ }),
+
+/***/ 187:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 187;
+
+/***/ }),
+
+/***/ 227:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DemoPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__demo2_demo2__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_arengine_service_arengine_service__ = __webpack_require__(123);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var DemoPage = (function () {
+    function DemoPage(plt, navCtrl, ngRenderer, ngZone, elementRef, arApi) {
+        this.plt = plt;
+        this.navCtrl = navCtrl;
+        this.ngRenderer = ngRenderer;
+        this.ngZone = ngZone;
+        this.elementRef = elementRef;
+        this.arApi = arApi;
+        this.deviceId = '';
+        this.fpsText = "";
+        this.mobilePlatform = false;
+    }
+    DemoPage.prototype.ngOnInit = function () {
+        console.log("ngOnInit");
+        var platform = this.plt.platforms();
+        console.log("plt", platform);
+    };
+    DemoPage.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        console.log("Content", this.content);
+        // this.startRendering(this.content);
+        // this.renderVideoStream(this.content);
+        this.arApi.getDeviceId().then(function (id) {
+            _this.deviceId = id;
+            console.log("device", _this.deviceId);
+            _this.arApi.createARParameters(id, _this.content, _this.ngRenderer);
+            _this.arApi.appendStatisticsScreen(_this.content, _this.ngRenderer);
+        });
+    };
+    DemoPage.prototype.changeCamera = function () {
+        var _this = this;
+        console.log("Changing camera");
+        this.arApi.getDeviceId(this.deviceId).then(function (deviId) {
+            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__demo2_demo2__["a" /* Demo2Page */], { id: deviId });
+        });
+    };
+    return DemoPage;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])('mainContent', { read: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */] }),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+], DemoPage.prototype, "content", void 0);
+DemoPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-demo',template:/*ion-inline-start:"/Users/shivamsingh/Documents/Projects/new-ts-arkit/src/pages/demo/demo.html"*/'<ion-content class="no-scroll" #mainContent>\n  <p style="color:red;z-index:100000">{{fpsText}}</p>\n  \n</ion-content>\n<ion-footer>\n  <!-- <button ion-button full (click)="changeCamera()">Change Camera</button> -->\n</ion-footer>\n'/*ion-inline-end:"/Users/shivamsingh/Documents/Projects/new-ts-arkit/src/pages/demo/demo.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgZone */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_3__providers_arengine_service_arengine_service__["a" /* ArengineServiceProvider */]])
+], DemoPage);
+
+//# sourceMappingURL=demo.js.map
+
+/***/ }),
+
+/***/ 228:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Demo2Page; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_arengine_service_arengine_service__ = __webpack_require__(123);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var Demo2Page = (function () {
+    function Demo2Page(plt, navCtrl, ngRenderer, ngZone, elementRef, arApi, navParams) {
+        this.plt = plt;
+        this.navCtrl = navCtrl;
+        this.ngRenderer = ngRenderer;
+        this.ngZone = ngZone;
+        this.elementRef = elementRef;
+        this.arApi = arApi;
+        this.navParams = navParams;
+        this.fpsText = "";
+        this.mobilePlatform = false;
+    }
+    Demo2Page.prototype.ngOnInit = function () {
+        console.log("ngOnInit");
+        var platform = this.plt.platforms();
+        console.log("plt", platform);
+    };
+    Demo2Page.prototype.ngAfterViewInit = function () {
+        console.log("Content", this.content);
+        // this.startRendering(this.content);
+        // this.renderVideoStream(this.content);
+        this.deviceId = this.navParams.get('id');
+        console.log("dev id on demo 2", this.deviceId);
+        this.arApi.createARParameters(this.deviceId, this.content, this.ngRenderer);
+        this.arApi.appendStatisticsScreen(this.content, this.ngRenderer);
+    };
+    Demo2Page.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Demo2Page');
+    };
+    return Demo2Page;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])('mainContent', { read: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */] }),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+], Demo2Page.prototype, "content", void 0);
+Demo2Page = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-demo2',template:/*ion-inline-start:"/Users/shivamsingh/Documents/Projects/new-ts-arkit/src/pages/demo2/demo2.html"*/'<ion-content class="no-scroll" #mainContent>\n  <p style="color:red;z-index:100000">{{fpsText}}</p>\n  \n</ion-content>'/*ion-inline-end:"/Users/shivamsingh/Documents/Projects/new-ts-arkit/src/pages/demo2/demo2.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgZone */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__providers_arengine_service_arengine_service__["a" /* ArengineServiceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+], Demo2Page);
+
+//# sourceMappingURL=demo2.js.map
+
+/***/ }),
+
+/***/ 265:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(266);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(284);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 284:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_demo_demo__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_diagnostic__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_arengine_service_arengine_service__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_jsex_jsex__ = __webpack_require__(422);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_demo2_demo2__ = __webpack_require__(228);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+// import { SplashScreen } from '@ionic-native/splash-screen';
+// import { StatusBar } from '@ionic-native/status-bar';
+
+
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    return AppModule;
+}());
+AppModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_5__pages_demo_demo__["a" /* DemoPage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_demo2_demo2__["a" /* Demo2Page */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_jsex_jsex__["a" /* JsexPage */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
+                links: []
+            })
+        ],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
+        entryComponents: [
+            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_5__pages_demo_demo__["a" /* DemoPage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_demo2_demo2__["a" /* Demo2Page */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_jsex_jsex__["a" /* JsexPage */]
+        ],
+        providers: [
+            // StatusBar, 
+            // SplashScreen,
+            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
+            __WEBPACK_IMPORTED_MODULE_6__ionic_native_diagnostic__["a" /* Diagnostic */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_arengine_service_arengine_service__["a" /* ArengineServiceProvider */],
+        ]
+    })
+], AppModule);
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 324:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_demo_demo__ = __webpack_require__(227);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var MyApp = (function () {
+    function MyApp(platform) {
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_2__pages_demo_demo__["a" /* DemoPage */];
+        platform.ready().then(function () {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            // statusBar.styleDefault();
+            // splashScreen.hide(); 
+            window.URL = window.URL || window.webkitURL;
+            //navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+            window.MediaDevices = window.MediaDevices || navigator.getUserMedia;
+            // this.checkPermissions();
+        });
+        // }
+        // private checkPermissions() {
+        //   this.diagnose.getCameraAuthorizationStatus().then(
+        //     success => {
+        //       console.log("success in camera", success);
+        //       this.diagnose.getMicrophoneAuthorizationStatus().then(done => {
+        //         console.log("mic success", done);
+        //         this.rootPage = HomePage;
+        //         return;
+        //       }, fail => {
+        //         this.diagnose.requestMicrophoneAuthorization().then(completed => {
+        //           this.checkPermissions();
+        //         });
+        //       });
+        //     }, failure => {
+        //       this.diagnose.requestCameraAuthorization().then(completed => {
+        //         this.checkPermissions();
+        //       })
+        //     });
+    }
+    return MyApp;
+}());
+MyApp = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/shivamsingh/Documents/Projects/new-ts-arkit/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/shivamsingh/Documents/Projects/new-ts-arkit/src/app/app.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */]])
+], MyApp);
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 364:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 365:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 411:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jsartoolkit5__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jsartoolkit5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jsartoolkit5__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_stats_js__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_stats_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_stats_js__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+var HomePage = (function () {
+    function HomePage(platform, navCtrl, ngRenderer, ngZone, elementRef) {
+        this.navCtrl = navCtrl;
+        this.ngRenderer = ngRenderer;
+        this.ngZone = ngZone;
+        this.elementRef = elementRef;
+        this.stats = new __WEBPACK_IMPORTED_MODULE_4_stats_js___default.a();
+        this.fpsText = "";
+        this.width = 640; //platform.width();
+        this.height = 480; //platform.height();
+        console.log("WxH: " + this.width + "x" + this.height);
+    }
+    HomePage.prototype.ngOnInit = function () {
+        console.log("ngOnInit");
+    };
+    HomePage.prototype.ngAfterViewInit = function () {
+        console.log("Content", this.content);
+        // this.startRendering(this.content);
+        // this.renderVideoStream(this.content);
+        this.createARParameters();
+        this.appendStatisticsScreen(this.content);
+    };
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                             Basic Required Functions                           ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     * Gets the device ID of the camera and
+     * chooses the rear one.
+     */
+    HomePage.prototype.getDeviceId = function () {
+        return navigator.mediaDevices.enumerateDevices().then(function (info) {
+            console.log("cam info", info);
+            var devId = 'unkwn';
+            info.forEach(function (x) {
+                if (x.label) {
+                    var labelRegEx = x.label.match(/back|rear/);
+                    if (labelRegEx !== null || labelRegEx !== undefined)
+                        devId = x.deviceId;
+                }
+            });
+            console.log(devId);
+            if (devId === null || devId === undefined || devId === 'unkwn') {
+                console.log("Inside if in getdeviceid");
+                info.forEach(function (x) {
+                    if (x.kind) {
+                        var kindRegEx = x.kind.match(/video|videoinput/);
+                        if (kindRegEx !== null || kindRegEx !== undefined)
+                            devId = x.deviceId;
+                    }
+                });
+            }
+            return devId;
+        });
+    };
+    /**
+  * Tracks markers in scene
+  * @param arScene
+  * @param arController
+  * @param markerId
+  * @param object
+  */
+    HomePage.prototype.trackMarker = function (arScene, arController, markerId, object) {
+        var marker = arController.createThreeBarcodeMarker(markerId, 1);
+        marker.add(object);
+        arScene.scene.add(marker);
+        // return marker
+    };
+    /**
+   * Creates on device camera
+   * @param width
+   * @param height
+   * @param arController
+   * @param arScene
+   */
+    HomePage.prototype.createWebGLRenderer = function (width, height, arController, arScene) {
+        var renderer = new __WEBPACK_IMPORTED_MODULE_2_three__["WebGLRenderer"]({
+            // antialias: true,
+            alpha: true
+        });
+        renderer.setClearColor(new __WEBPACK_IMPORTED_MODULE_2_three__["Color"]('lightgrey'), 0);
+        console.log("orientation", arController.orientation);
+        var f = Math.min(window.innerWidth / arScene.video.videoWidth, window.innerHeight / arScene.video.videoHeight);
+        var w = f * arScene.video.videoWidth;
+        var h = f * arScene.video.videoHeight;
+        if (arController.orientation === 'portrait') {
+            renderer.setSize(h, w);
+            renderer.domElement.style.transformOrigin = '0 0';
+            renderer.domElement.style.transform = 'rotate(-90deg) translateX(-100%)';
+        }
+        else {
+            renderer.setSize(w, h);
+        }
+        renderer.domElement.style.position = 'absolute';
+        renderer.domElement.style.top = '0px';
+        renderer.domElement.style.left = '0px';
+        // renderer.render(Scene,Camera)
+        return renderer;
+    };
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                              Canvas Based Rendering                            ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     * STart renderng the WEB GL Canvas
+     */
+    HomePage.prototype.startRendering = function (content) {
+        var _this = this;
+        //let videoNative = this.videoElement.nativeElement;
+        var vw = this.width;
+        var vh = this.height;
+        if ('MediaDevices' in window || navigator.getUserMedia) {
+            // let constraints: MediaStreamConstraints = { video: { facingMode: 'environment' } };
+            // console.log("Mediascreens");
+            // console.log(navigator.mediaDevices.getUserMedia(constraints));
+            this.getDeviceId().then(function (id) {
+                console.log("dev id", id);
+                _this.deviceId = id;
+                var camConfig = { video: { deviceId: _this.deviceId } };
+                __WEBPACK_IMPORTED_MODULE_3_jsartoolkit5__["ARController"].getUserMediaThreeScene({
+                    maxARVideoSize: 640,
+                    cameraConfig: camConfig,
+                    cameraParam: 'assets/data/camera_para.dat',
+                    onSuccess: function (arScene, arController, arCamera) {
+                        arController.setPatternDetectionMode(__WEBPACK_IMPORTED_MODULE_3_jsartoolkit5__["artoolkit"].AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
+                        var renderer = _this.createWebGLRenderer(vw, vh, arController, arScene);
+                        var rotationTarget = 0;
+                        renderer.domElement.addEventListener('click', function (ev) {
+                            console.log("Inside click");
+                            ev.preventDefault();
+                            rotationTarget += 1;
+                        }, false);
+                        // dont use document,  instead use viewchild/renderer
+                        // document.body.appendChild(renderer.domElement);
+                        try {
+                            _this.ngRenderer.appendChild(content.nativeElement, renderer.domElement);
+                            // document.body.appendChild(renderer.domElement);
+                        }
+                        catch (ex) {
+                            console.log("Error in startRendering", ex);
+                        }
+                        // let cube = this.createCube();
+                        var icosahedron = _this.createIcosahedron();
+                        _this.createAvatar(function (object) {
+                            console.log("Callback returned", object);
+                            _this.trackMarker(arScene, arController, 5, object);
+                        });
+                        // this.trackMarker(arScene, arController, 5, cube);
+                        _this.trackMarker(arScene, arController, 20, icosahedron);
+                        var updateRendering = function () {
+                            // console.log("Inside tick");
+                            // let time = performance.now() / 1000;
+                            _this.stats.update();
+                            _this.ngZone.runOutsideAngular(function () {
+                                arScene.process();
+                                arScene.renderOn(renderer);
+                                requestAnimationFrame(updateRendering);
+                            });
+                        };
+                        updateRendering();
+                    }
+                });
+            });
+        }
+    };
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                              Video Based Rendering                            ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     * Deprecated __
+     * New function which will render video input in videoElement
+     */
+    HomePage.prototype.renderVideoStream = function (content) {
+        var _this = this;
+        this.getDeviceId().then(function (devId) {
+            navigator.mediaDevices.getUserMedia({ video: { deviceId: devId } })
+                .then(function (stream) {
+                var domElement = _this.ngRenderer.createElement('video');
+                domElement.setAttribute('autoplay', '');
+                domElement.setAttribute('muted', '');
+                domElement.setAttribute('playsinline', '');
+                domElement.style.width = window.innerWidth + 'px';
+                domElement.style.height = window.innerHeight + 'px';
+                domElement.srcObject = stream;
+                document.body.addEventListener('click', function () {
+                    domElement.play();
+                });
+                _this.ngRenderer.appendChild(content.nativeElement, domElement);
+                domElement.onload = function (loaded) {
+                    console.log("Video Elem Loaded", loaded);
+                    _this.ngRenderer.appendChild(content.nativeElement, domElement);
+                };
+                _this.createScene();
+            });
+        });
+    };
+    /**
+     * Create camera, scene and arcontroller manually
+     * MAIN
+     */
+    HomePage.prototype.createARParameters = function () {
+        var _this = this;
+        // const scene = new Scene();
+        // const camera = new Camera();
+        // const cameraParam = new ARCameraParam();
+        var vw = window.innerWidth;
+        var vh = window.innerHeight;
+        this.getDeviceId().then(function (id) {
+            console.log("dev id", id);
+            _this.deviceId = id;
+            var camConfig = { video: { deviceId: _this.deviceId } };
+            var successFn = function (arScene, arController, arCamera) {
+                _this.ngRenderer.appendChild(_this.content.nativeElement, videoOut);
+                arController.setPatternDetectionMode(__WEBPACK_IMPORTED_MODULE_3_jsartoolkit5__["artoolkit"].AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
+                var renderer = _this.createWebGLRenderer(vw, vh, arController, arScene);
+                // click event
+                _this.ngRenderer.listen('document', 'click', function (ev) {
+                    console.log("ng Clicked");
+                });
+                _this.ngRenderer.appendChild(_this.content.nativeElement, renderer.domElement);
+                console.log("elref", _this.elementRef.nativeElement);
+                var icosahedron = _this.createIcosahedron();
+                var torus = _this.createTorus();
+                // this.createAvatar((object) => {
+                //     console.log("Callback returned", object);
+                //     this.trackMarker(arScene, arController, 5, object);
+                // });
+                _this.trackMarker(arScene, arController, 5, icosahedron);
+                _this.trackMarker(arScene, arController, 20, torus);
+                var stop = false;
+                var frameCount = 0;
+                // let $results = $("#results");
+                var fps = 60, fpsInterval, startTime, now, then, elapsed, count = 0;
+                var updateRendering = function () {
+                    // console.log("Inside tick");
+                    // let time = performance.now() / 1000;
+                    torus.rotation.x += 0.1;
+                    icosahedron.rotation.y += 0.1;
+                    _this.stats.update();
+                    // this.ngZone.runOutsideAngular(() => {
+                    requestAnimationFrame(updateRendering);
+                    now = Date.now();
+                    elapsed = now - then;
+                    if (elapsed > fpsInterval) {
+                        // console.log("count a", ++count);
+                        then = now - (elapsed % fpsInterval);
+                        // let newScene = this.createScene()
+                        arScene.process();
+                        arScene.renderOn(renderer);
+                        var sinceStart = now - startTime;
+                        var currentFps = Math.round(1000 / (sinceStart / ++count) * 100) / 100;
+                        _this.fpsText = "Elapsed time= " + Math.round(sinceStart / 1000 * 100) / 100 + " secs @" + currentFps + " fps.";
+                    }
+                    // });
+                };
+                fpsInterval = 1000 / fps;
+                then = Date.now();
+                startTime = then;
+                updateRendering();
+            };
+            var videoOut = __WEBPACK_IMPORTED_MODULE_3_jsartoolkit5__["ARController"].getUserMediaThreeScene({
+                width: window.innerWidth,
+                height: window.innerHeight,
+                maxARVideoSize: 1080,
+                cameraConfig: camConfig,
+                cameraParam: 'assets/data/camera_para.dat',
+                onSuccess: successFn
+            });
+        });
+    };
+    HomePage.prototype.createScene = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var scene, camera, cameraParam;
+            return __generator(this, function (_a) {
+                scene = new __WEBPACK_IMPORTED_MODULE_2_three__["Scene"]();
+                camera = new __WEBPACK_IMPORTED_MODULE_2_three__["Camera"]();
+                cameraParam = new __WEBPACK_IMPORTED_MODULE_3_jsartoolkit5__["ARCameraParam"]();
+                cameraParam.onload = function () { return __awaiter(_this, void 0, void 0, function () {
+                    var _this = this;
+                    var arController, projMatrixArr, projMtx, artoolkitProjectionAxisTransformMatrix, obj, marker, smoothedRoot, renderer, fps, fpsInterval, startTime, now, then, elapsed, count, updateRendering, _a, camConfig;
+                    return __generator(this, function (_b) {
+                        switch (_b.label) {
+                            case 0:
+                                console.log("Camera loaded");
+                                arController.setPatternDetectionMode(__WEBPACK_IMPORTED_MODULE_3_jsartoolkit5__["artoolkit"].AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
+                                projMatrixArr = arController.getCameraMatrix();
+                                projMtx = new __WEBPACK_IMPORTED_MODULE_2_three__["Matrix4"]().fromArray(projMatrixArr);
+                                artoolkitProjectionAxisTransformMatrix = new __WEBPACK_IMPORTED_MODULE_2_three__["Matrix4"]();
+                                artoolkitProjectionAxisTransformMatrix.multiply(new __WEBPACK_IMPORTED_MODULE_2_three__["Matrix4"]().makeRotationY(Math.PI));
+                                artoolkitProjectionAxisTransformMatrix.multiply(new __WEBPACK_IMPORTED_MODULE_2_three__["Matrix4"]().makeRotationZ(Math.PI));
+                                projMtx.multiply(artoolkitProjectionAxisTransformMatrix);
+                                scene.add(camera);
+                                camera.matrixAutoUpdate = false;
+                                camera.projectionMatrix.elements.set(projMtx.toArray());
+                                obj = this.createIcosahedron();
+                                marker = this.trackMarker({}, arController, 5, obj);
+                                smoothedRoot = new __WEBPACK_IMPORTED_MODULE_2_three__["Group"]();
+                                renderer = this.createWebGLRenderer(window.innerWidth, window.innerHeight, arController, scene);
+                                this.ngRenderer.appendChild(this.content.nativeElement, renderer.domElement);
+                                fps = 60, count = 0;
+                                updateRendering = function () {
+                                    // console.log("Inside tick");
+                                    // let time = performance.now() / 1000;
+                                    _this.stats.update();
+                                    // this.ngZone.runOutsideAngular(() => {
+                                    requestAnimationFrame(updateRendering);
+                                    now = Date.now();
+                                    elapsed = now - then;
+                                    if (elapsed > fpsInterval) {
+                                        // console.log("count a", ++count);
+                                        ++count;
+                                        then = now - (elapsed % fpsInterval);
+                                        renderer.render(scene, camera);
+                                        var sinceStart = now - startTime;
+                                        var currentFps = Math.round(1000 / (sinceStart / count) * 100) / 100;
+                                        _this.fpsText = "Elapsed time= " + Math.round(sinceStart / 1000 * 100) / 100 + " secs @" + currentFps + " fps.";
+                                    }
+                                    // });
+                                };
+                                fpsInterval = 1000 / fps;
+                                then = Date.now();
+                                startTime = then;
+                                updateRendering();
+                                _a = this;
+                                return [4 /*yield*/, this.getDeviceId()];
+                            case 1:
+                                _a.deviceId = _b.sent();
+                                camConfig = { video: { deviceId: this.deviceId } };
+                                return [2 /*return*/];
+                        }
+                    });
+                }); };
+                cameraParam.load('assets/data/camera_para.dat');
+                return [2 /*return*/];
+            });
+        });
+    };
+    HomePage.prototype.process = function () {
+    };
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                              Performance Statics                                ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     * Append Frame stats on screen
+     */
+    HomePage.prototype.appendStatisticsScreen = function (content) {
+        // this.stats.showPanel(1);
+        try {
+            this.ngRenderer.appendChild(content.nativeElement, this.stats.dom);
+        }
+        catch (ex) {
+            console.log("Error in appendStatisticsScreen", ex);
+        }
+    };
+    /**
+     * Increments the angle of x axis of the object.
+     * @param object
+     */
+    HomePage.prototype.incrementXAngle = function (object) {
+        object.rotation.x += 5;
+    };
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////                                    3D Objects                                  ////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+   * Creates Simple Cube
+   */
+    HomePage.prototype.createCube = function () {
+        var cube = new __WEBPACK_IMPORTED_MODULE_2_three__["Mesh"](new __WEBPACK_IMPORTED_MODULE_2_three__["BoxGeometry"](1, 1, 1), new __WEBPACK_IMPORTED_MODULE_2_three__["MeshNormalMaterial"]());
+        var m = cube.material;
+        m.shading = __WEBPACK_IMPORTED_MODULE_2_three__["FlatShading"];
+        // cube.material.shading = FlatShading;
+        cube.position.z = 0.5;
+        return cube;
+    };
+    /**
+     * Creates Sphere
+     */
+    HomePage.prototype.createIcosahedron = function () {
+        var icosahedron = new __WEBPACK_IMPORTED_MODULE_2_three__["Mesh"](new __WEBPACK_IMPORTED_MODULE_2_three__["IcosahedronGeometry"](0.7, 1), new __WEBPACK_IMPORTED_MODULE_2_three__["MeshNormalMaterial"]());
+        var m = icosahedron.material;
+        m.shading = __WEBPACK_IMPORTED_MODULE_2_three__["FlatShading"];
+        // icosahedron.material.shading = FlatShading;
+        icosahedron.position.z = 0.7;
+        return icosahedron;
+    };
+    HomePage.prototype.createTorus = function () {
+        var geometry = new __WEBPACK_IMPORTED_MODULE_2_three__["TorusKnotGeometry"](0.3, 0.1, 64, 16);
+        var material = new __WEBPACK_IMPORTED_MODULE_2_three__["MeshNormalMaterial"]();
+        var mesh = new __WEBPACK_IMPORTED_MODULE_2_three__["Mesh"](geometry, material);
+        mesh.scale.x = 2;
+        mesh.scale.y = 2;
+        mesh.scale.z = 2;
+        mesh.position.y = 0.5;
+        return mesh;
+    };
+    /**
+     * Creates custom object Avatar
+     * NOTE: You need ot have the object in json
+     * that will be parsed by teh JSON loader.
+     * .OBJ files can be converted to .JSON
+     * in three.js editor.
+     */
+    HomePage.prototype.createAvatar = function (callback) {
+        console.log("Starting avatar 20");
+        var manager = new __WEBPACK_IMPORTED_MODULE_2_three__["LoadingManager"]();
+        manager.onLoad = function () {
+            console.log('Loading started!');
+            try {
+                var speech = window.speechSynthesis;
+                // let speech = new window.speechSynthesis;
+                var speak = new SpeechSynthesisUtterance('Hey Ya Boy, Whats up.');
+                speech.speak(speak);
+            }
+            catch (ex) {
+                console.log("error in speaking", ex);
+            }
+        };
+        manager.onError = function () {
+            console.log("Error in loding res");
+        };
+        manager.onProgress = function (url, itemsLoaded, itemsTotal) {
+            console.log('Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.');
+        };
+        var objLoader = new __WEBPACK_IMPORTED_MODULE_2_three__["ObjectLoader"](manager);
+        var material = new __WEBPACK_IMPORTED_MODULE_2_three__["MeshNormalMaterial"]();
+        console.log("Object oader", objLoader, "material", material);
+        objLoader.load('assets/avatar/legoboy.json', function (obj) {
+            console.log("Avatar Loaded", obj);
+            // let mesh = new Mesh(object, material); 
+            obj.traverse(function (child) {
+                if (child instanceof __WEBPACK_IMPORTED_MODULE_2_three__["Mesh"]) {
+                    console.log("inside child");
+                    child.material = material;
+                    child.material.shading = __WEBPACK_IMPORTED_MODULE_2_three__["FlatShading"];
+                }
+            });
+            //Rotation angle is in radians
+            // Formula will be pi/2 for 90 deg
+            obj.rotation.x = Math.PI / 2;
+            obj.position.z = 0.5;
+            obj.scale.x = 0.7;
+            obj.scale.y = 0.7;
+            obj.scale.z = 0.7;
+            console.log('positionobj x:', obj.position.x, 'y', obj.position.y, 'z', obj.position.z);
+            callback(obj);
+        });
+    };
+    return HomePage;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])('mainContent', { read: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */] }),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+], HomePage.prototype, "content", void 0);
+HomePage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-home',template:/*ion-inline-start:"/Users/shivamsingh/Documents/Projects/new-ts-arkit/src/pages/home/home.html"*/'<ion-content class="no-scroll" #mainContent>\n  <p style="color:red;z-index:100000">{{fpsText}}</p>\n  <button (click)="incrementAngle()"></button>\n</ion-content>'/*ion-inline-end:"/Users/shivamsingh/Documents/Projects/new-ts-arkit/src/pages/home/home.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgZone */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */]])
+], HomePage);
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 422:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JsexPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jsartoolkit5__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jsartoolkit5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jsartoolkit5__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_three__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_stats_js__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_stats_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_stats_js__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+
+var JsexPage = (function () {
+    function JsexPage(navCtrl, navParams, ngRenderer) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.ngRenderer = ngRenderer;
+    }
+    JsexPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad JsexPage');
+    };
+    JsexPage.prototype.ngOnInit = function () {
+        this.startAR();
+    };
+    /**
+      * Gets the device ID of the camera and
+      * chooses the rear one.
+      */
+    JsexPage.prototype.getDeviceId = function () {
+        return navigator.mediaDevices.enumerateDevices().then(function (info) {
+            console.log("cam info", info);
+            var devId = 'unkwn';
+            info.forEach(function (x) {
+                if (x.label) {
+                    var labelRegEx = x.label.match(/back|rear/);
+                    if (labelRegEx !== null || labelRegEx !== undefined)
+                        devId = x.deviceId;
+                }
+            });
+            console.log(devId);
+            if (devId === null || devId === undefined || devId === 'unkwn') {
+                console.log("Inside if in getdeviceid");
+                info.forEach(function (x) {
+                    if (x.kind) {
+                        var kindRegEx = x.kind.match(/video|videoinput/);
+                        if (kindRegEx !== null || kindRegEx !== undefined)
+                            devId = x.deviceId;
+                    }
+                });
+            }
+            return devId;
+        });
+    };
+    JsexPage.prototype.startAR = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var devId, camConfig;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.getDeviceId()];
+                    case 1:
+                        devId = _a.sent();
+                        camConfig = { video: { deviceId: devId } };
+                        __WEBPACK_IMPORTED_MODULE_2_jsartoolkit5__["ARController"].getUserMediaThreeScene({
+                            maxARVideoSize: 320, cameraParam: 'assets/data/camera_para.dat', cameraConfig: camConfig,
+                            onSuccess: function (arScene, arController, arCamera) {
+                                _this.content.nativeElement.className = arController.orientation;
+                                arController.setPatternDetectionMode(__WEBPACK_IMPORTED_MODULE_2_jsartoolkit5__["artoolkit"].AR_MATRIX_CODE_DETECTION);
+                                var renderer = new __WEBPACK_IMPORTED_MODULE_3_three__["WebGLRenderer"]({ antialias: true });
+                                if (arController.orientation === 'portrait') {
+                                    var w = (window.innerWidth / arController.videoHeight) * arController.videoWidth;
+                                    var h = window.innerWidth;
+                                    renderer.setSize(w, h);
+                                    renderer.domElement.style.paddingBottom = (w - h) + 'px';
+                                }
+                                else {
+                                    if (/Android|mobile|iPad|iPhone/i.test(navigator.userAgent)) {
+                                        renderer.setSize(window.innerWidth, (window.innerWidth / arController.videoWidth) * arController.videoHeight);
+                                    }
+                                    else {
+                                        renderer.setSize(arController.videoWidth, arController.videoHeight);
+                                        document.body.className += ' desktop';
+                                    }
+                                }
+                                // document.body.insertBefore(renderer.domElement, document.body.firstChild);
+                                _this.ngRenderer.appendChild(_this.content.nativeElement, renderer.domElement);
+                                // See /doc/patterns/Matrix code 3x3 (72dpi)/20.png
+                                var markerRoot = arController.createThreeBarcodeMarker(20);
+                                var sphere = new __WEBPACK_IMPORTED_MODULE_3_three__["Mesh"](new __WEBPACK_IMPORTED_MODULE_3_three__["SphereGeometry"](0.5, 8, 8), new __WEBPACK_IMPORTED_MODULE_3_three__["MeshNormalMaterial"]());
+                                var Exsphere = sphere.material;
+                                Exsphere.shading = __WEBPACK_IMPORTED_MODULE_3_three__["FlatShading"];
+                                sphere.position.z = 0.5;
+                                markerRoot.add(sphere);
+                                arScene.scene.add(markerRoot);
+                                var rotationV = 0;
+                                var rotationTarget = 0;
+                                renderer.domElement.addEventListener('click', function (ev) {
+                                    ev.preventDefault();
+                                    rotationTarget += 1;
+                                }, false);
+                                var stats = new __WEBPACK_IMPORTED_MODULE_4_stats_js___default.a();
+                                _this.ngRenderer.insertBefore(_this.content.nativeElement, stats.dom, stats);
+                                var tick = function () {
+                                    stats.update();
+                                    arScene.process();
+                                    arScene.renderOn(renderer);
+                                    rotationV += (rotationTarget - sphere.rotation.z) * 0.05;
+                                    sphere.rotation.z += rotationV;
+                                    rotationV *= 0.8;
+                                    requestAnimationFrame(tick);
+                                };
+                                tick();
+                            }
+                        });
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    return JsexPage;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])('JsexContent', { read: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */] }),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+], JsexPage.prototype, "content", void 0);
+JsexPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-jsex',template:/*ion-inline-start:"/Users/shivamsingh/Documents/Projects/new-ts-arkit/src/pages/jsex/jsex.html"*/'<ion-content #JsexContent>\n  <!-- <div #fpsmonitor id="fpscanvas"></div> -->\n  <!-- <video #videoElement autoplay preload=\'auto\' [width]="width" [height]="height" webkitPlaysinline></video> -->\n<p style="color:red;z-index:100000">{{fpsText}}</p>\n  <!-- <button (click)="incrementAngle()"></button> -->\n</ion-content>\n'/*ion-inline-end:"/Users/shivamsingh/Documents/Projects/new-ts-arkit/src/pages/jsex/jsex.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* Renderer2 */]])
+], JsexPage);
+
+//# sourceMappingURL=jsex.js.map
+
+/***/ })
+
+},[265]);
+//# sourceMappingURL=main.js.map

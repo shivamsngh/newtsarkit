@@ -119,8 +119,8 @@ export class ArengineServiceProvider {
     // return marker
   }
 
-  private trackManualMarker(arScene: any, arController, markerId: number, object: Mesh){
-    arController.loadMarker('/assets/data/patt.hiro', function(markerUID) {
+  private trackManualMarker(arScene: any, arController, markerId: number, object: Mesh) {
+    arController.loadMarker('/assets/data/patt.hiro', function (markerUID) {
       console.log("marker uuid", markerUID)
       var markerRoot = arController.createThreeMarker(markerUID);
       console.log("Marker root", markerRoot);
@@ -180,7 +180,7 @@ export class ArengineServiceProvider {
     let successFn = (arScene: ARThreeScene, arController, arCamera) => {
       // arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
       arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_COLOR);
-      
+
       // arController.setMarkerInfoDir(1, 'assets/data/pattern-marker.patt');
       const renderer = this.createWebGLRenderer(vw, vh, arController, arScene);
       // click event
@@ -214,16 +214,16 @@ export class ArengineServiceProvider {
         this.stats.update();
         // this.ngZone.runOutsideAngular(() => {
         requestAnimationFrame(updateRendering);
-        // now = Date.now();
-        // elapsed = now - then;
-        // if (elapsed > fpsInterval) {
-        then = now - (elapsed % fpsInterval);
-        arScene.process();
-        arScene.renderOn(renderer);
-        var sinceStart = now - startTime;
-        var currentFps = Math.round(1000 / (sinceStart / ++count) * 100) / 100;
-        this.fpsText = `Elapsed time= ${Math.round(sinceStart / 1000 * 100) / 100} secs @${currentFps} fps.`;
-        // }
+        now = Date.now();
+        elapsed = now - then;
+        if (elapsed > fpsInterval) {
+          then = now - (elapsed % fpsInterval);
+          arScene.process();
+          arScene.renderOn(renderer);
+          var sinceStart = now - startTime;
+          var currentFps = Math.round(1000 / (sinceStart / ++count) * 100) / 100;
+          this.fpsText = `Elapsed time= ${Math.round(sinceStart / 1000 * 100) / 100} secs @${currentFps} fps.`;
+        }
         // });
       };
       fpsInterval = 1000 / fps;
