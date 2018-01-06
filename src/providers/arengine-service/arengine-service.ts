@@ -119,6 +119,16 @@ export class ArengineServiceProvider {
     // return marker
   }
 
+  private trackManualMarker(arScene: any, arController, markerId: number, object: Mesh){
+    arController.loadMarker('/assets/data/patt.hiro', function(markerUID) {
+      console.log("marker uuid", markerUID)
+      var markerRoot = arController.createThreeMarker(markerUID);
+      console.log("Marker root", markerRoot);
+      markerRoot.add(object);
+      arScene.scene.add(markerRoot);
+    });
+  }
+
   /**
  * Creates on device camera 
  * @param width 
@@ -168,7 +178,9 @@ export class ArengineServiceProvider {
     const vh = window.innerHeight;
     const camConfig: CameraDeviceConfig = { video: { deviceId: id } };
     let successFn = (arScene: ARThreeScene, arController, arCamera) => {
-      arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
+      // arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
+      arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_COLOR);
+      
       // arController.setMarkerInfoDir(1, 'assets/data/pattern-marker.patt');
       const renderer = this.createWebGLRenderer(vw, vh, arController, arScene);
       // click event
@@ -185,8 +197,9 @@ export class ArengineServiceProvider {
       //     console.log("Callback returned", object);
       //     this.trackMarker(arScene, arController, 5, object);
       // });
-      this.trackMarker(arScene, arController, 5, icosahedron);
-      this.trackMarker(arScene, arController, 20, torus);
+      // this.trackMarker(arScene, arController, 5, icosahedron);
+      // this.trackMarker(arScene, arController, 20, torus);
+      this.trackManualMarker(arScene, arController, 5, icosahedron);
 
       let stop = false;
       let frameCount = 0;
