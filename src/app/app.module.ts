@@ -6,13 +6,18 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { DemoPage } from '../pages/demo/demo';
+
 import { Diagnostic } from '@ionic-native/diagnostic';
 import { ArengineServiceProvider } from '../providers/arengine-service/arengine-service';
+import { JsexPage } from '../pages/jsex/jsex';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    DemoPage,
+    JsexPage
   ],
   imports: [
     BrowserModule,
@@ -22,13 +27,15 @@ import { ArengineServiceProvider } from '../providers/arengine-service/arengine-
   entryComponents: [
     MyApp,
     HomePage,
+    DemoPage,
+    JsexPage
   ],
   providers: [
     // StatusBar, 
     // SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     Diagnostic,
     ArengineServiceProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }

@@ -1,8 +1,7 @@
 import { Component, ViewChild, ElementRef, Renderer2, OnInit, NgZone } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 
-import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide, LoadingManager, Material, JSONLoader, Object3D, Scene, Camera, TorusKnotGeometry } from 'three';
-
+import { WebGLRenderer, ObjectLoader, Color, Mesh, MeshNormalMaterial, BoxGeometry, IcosahedronGeometry, FlatShading, MeshBasicMaterial, DoubleSide, LoadingManager, Material, JSONLoader, Object3D, Scene, Camera, TorusKnotGeometry, Group, Matrix4 } from 'three';
 
 import { ARController, ARThreeScene, artoolkit, CameraDeviceConfig, ARCameraParam } from 'jsartoolkit5';
 import Stats from 'stats.js';
@@ -25,7 +24,7 @@ export class HomePage implements OnInit {
     fpsText: string = "";
 
 
-    constructor(platform: Platform, public navCtrl: NavController, public ngRenderer: Renderer2, private ngZone: NgZone) {
+    constructor(platform: Platform, public navCtrl: NavController, public ngRenderer: Renderer2, private ngZone: NgZone, private elementRef:ElementRef) {
         this.width = 640;//platform.width();
         this.height = 480;//platform.height();
         console.log(`WxH: ${this.width}x${this.height}`);
@@ -84,10 +83,11 @@ export class HomePage implements OnInit {
   * @param markerId 
   * @param object 
   */
-    private trackMarker(arScene: ARThreeScene, arController, markerId: number, object: Mesh) {
+    private trackMarker(arScene: any, arController, markerId: number, object: Mesh) {
         var marker = arController.createThreeBarcodeMarker(markerId, 1);
         marker.add(object);
         arScene.scene.add(marker);
+        // return marker
     }
 
     /**
@@ -97,21 +97,19 @@ export class HomePage implements OnInit {
    * @param arController 
    * @param arScene 
    */
-    private createWebGLRenderer(width: number, height: number, arController, arScene): WebGLRenderer {
+    private createWebGLRenderer(width: number, height: number, arController, arScene?): WebGLRenderer {
         var renderer = new WebGLRenderer({
             // antialias: true,
             alpha: true
         });
         renderer.setClearColor(new Color('lightgrey'), 0);
         console.log("orientation", arController.orientation);
-        // let f = Math.min(
-        //     window.innerWidth / arScene.video.videoWidth,
-        //     window.innerHeight / arScene.video.videoHeight
-        // );
-        // const w = f * arScene.video.videoWidth;
-        // const h = f * arScene.video.videoHeight;
-        const w = window.innerWidth;
-        const h = window.innerHeight;
+        let f = Math.min(
+            window.innerWidth / arScene.video.videoWidth,
+            window.innerHeight / arScene.video.videoHeight
+        );
+        const w = f * arScene.video.videoWidth;
+        const h = f * arScene.video.videoHeight;
         if (arController.orientation === 'portrait') {
             renderer.setSize(h, w);
             renderer.domElement.style.transformOrigin = '0 0';
@@ -227,7 +225,9 @@ export class HomePage implements OnInit {
                     domElement.onload = (loaded) => {
                         console.log("Video Elem Loaded", loaded);
                         this.ngRenderer.appendChild(content.nativeElement, domElement);
+
                     }
+                    this.createScene();
 
                 });
         });
@@ -251,14 +251,20 @@ export class HomePage implements OnInit {
                 this.ngRenderer.appendChild(this.content.nativeElement, videoOut);
                 arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
                 const renderer = this.createWebGLRenderer(vw, vh, arController, arScene);
-                this.ngRenderer.appendChild(this.content.nativeElement, renderer.domElement);
-                // const icosahedron = this.createIcosahedron();
-                const torus = this.createTorus();
-                this.createAvatar((object) => {
-                    console.log("Callback returned", object);
-                    this.trackMarker(arScene, arController, 5, object);
+                // click event
+                this.ngRenderer.listen('document','click',(ev)=>{
+                    console.log("ng Clicked");
                 });
-                // this.trackMarker(arScene, arController, 5, cube);
+                this.ngRenderer.appendChild(this.content.nativeElement, renderer.domElement);
+                console.log("elref", this.elementRef.nativeElement);
+              
+                const icosahedron = this.createIcosahedron();
+                const torus = this.createTorus();
+                // this.createAvatar((object) => {
+                //     console.log("Callback returned", object);
+                //     this.trackMarker(arScene, arController, 5, object);
+                // });
+                this.trackMarker(arScene, arController, 5, icosahedron);
                 this.trackMarker(arScene, arController, 20, torus);
 
                 let stop = false;
@@ -269,16 +275,20 @@ export class HomePage implements OnInit {
                 let updateRendering = () => {
                     // console.log("Inside tick");
                     // let time = performance.now() / 1000;
+                    torus.rotation.x += 0.1;
+                    icosahedron.rotation.y += 0.1;
                     this.stats.update();
                     // this.ngZone.runOutsideAngular(() => {
                     requestAnimationFrame(updateRendering);
                     now = Date.now();
                     elapsed = now - then;
                     if (elapsed > fpsInterval) {
-                        console.log("count a", ++count);
+                        // console.log("count a", ++count);
                         then = now - (elapsed % fpsInterval);
+                        // let newScene = this.createScene()
                         arScene.process();
                         arScene.renderOn(renderer);
+
                         var sinceStart = now - startTime;
                         var currentFps = Math.round(1000 / (sinceStart / ++count) * 100) / 100;
                         this.fpsText = `Elapsed time= ${Math.round(sinceStart / 1000 * 100) / 100} secs @${currentFps} fps.`;
@@ -299,12 +309,76 @@ export class HomePage implements OnInit {
                 onSuccess: successFn
             })
         });
+    }
 
-        // catch(ex){
-        //     console.log("Error in projection",ex);
-        // }
+    public async createScene() {
+        let scene = new Scene();
+        let camera = new Camera();
 
+        let cameraParam = new ARCameraParam();
 
+        cameraParam.onload = async () => {
+            console.log("Camera loaded");
+            let arController: any;
+            arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_MONO_AND_MATRIX);
+            const projMatrixArr = arController.getCameraMatrix();
+            const projMtx = new Matrix4().fromArray(projMatrixArr);
+            let artoolkitProjectionAxisTransformMatrix = new Matrix4()
+            artoolkitProjectionAxisTransformMatrix.multiply(new Matrix4().makeRotationY(Math.PI))
+            artoolkitProjectionAxisTransformMatrix.multiply(new Matrix4().makeRotationZ(Math.PI))
+            projMtx.multiply(artoolkitProjectionAxisTransformMatrix);
+            scene.add(camera);
+            camera.matrixAutoUpdate = false;
+            camera.projectionMatrix.elements.set(projMtx.toArray());
+
+            let obj = this.createIcosahedron();
+
+            let marker = this.trackMarker({}, arController, 5, obj);
+            // scene.add(marker);
+
+            let smoothedRoot = new Group();
+            // scene.add(smoothedRoot);
+            // obj.position.lerp = 0.4;
+            // obj.quaternion.slerp = 0.3;
+            // obj.scale = 1; let fps = 60, fpsInterval, startTime, now, then, elapsed, count = 0;
+            let renderer = this.createWebGLRenderer(window.innerWidth, window.innerHeight, arController, scene);
+            this.ngRenderer.appendChild(this.content.nativeElement, renderer.domElement);
+
+            let fps = 60, fpsInterval, startTime, now, then, elapsed, count = 0;
+
+            let updateRendering = () => {
+                // console.log("Inside tick");
+                // let time = performance.now() / 1000;
+                this.stats.update();
+                // this.ngZone.runOutsideAngular(() => {
+                requestAnimationFrame(updateRendering);
+                now = Date.now();
+                elapsed = now - then;
+                if (elapsed > fpsInterval) {
+                    // console.log("count a", ++count);
+                    ++count;
+                    then = now - (elapsed % fpsInterval);
+                    renderer.render(scene, camera);
+                    var sinceStart = now - startTime;
+                    var currentFps = Math.round(1000 / (sinceStart / count) * 100) / 100;
+                    this.fpsText = `Elapsed time= ${Math.round(sinceStart / 1000 * 100) / 100} secs @${currentFps} fps.`;
+
+                }
+                // });
+            };
+            fpsInterval = 1000 / fps;
+            then = Date.now();
+            startTime = then;
+            updateRendering();
+            this.deviceId = await this.getDeviceId();
+            const camConfig: CameraDeviceConfig = { video: { deviceId: this.deviceId } };
+        }
+
+        cameraParam.load('assets/data/camera_para.dat');
+
+    }
+
+    public process() {
 
     }
 

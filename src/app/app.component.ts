@@ -5,12 +5,14 @@ import { Platform } from 'ionic-angular';
 
 import { HomePage } from '../pages/home/home';
 import { Diagnostic } from '@ionic-native/diagnostic';
+import { JsexPage } from '../pages/jsex/jsex';
+import { DemoPage } from '../pages/demo/demo';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = HomePage;
+  rootPage: any = DemoPage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {

@@ -25,9 +25,9 @@
         <param name="android-package" value="cordova.plugins.Diagnostic" />
         <param name="onload" value="true" />
     </feature>
-    <name>TSARKit</name>
-    <description>Augmented Reality in a Web view.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <name>IonicARKit</name>
+    <description>Augmented Reality with touch of Ionic.</description>
+    <author email="shivamsngh@hotmail.com" href="http://shivamsngh.github.io/">Shivam Singh</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -62,6 +62,6 @@
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="FadeSplashScreenDuration" value="300" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
-    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreen" value="assets/imgs/splashscreen.png" />
     <preference name="SplashScreenDelay" value="3000" />
 </widget>
