@@ -11,12 +11,15 @@ import { DemoPage } from '../pages/demo/demo';
 import { Diagnostic } from '@ionic-native/diagnostic';
 import { ArengineServiceProvider } from '../providers/arengine-service/arengine-service';
 import { JsexPage } from '../pages/jsex/jsex';
+import { Demo2Page } from '../pages/demo2/demo2';
+import { Renderer2 } from '@angular/core/src/render/api';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     DemoPage,
+    Demo2Page,
     JsexPage
   ],
   imports: [
@@ -28,6 +31,7 @@ import { JsexPage } from '../pages/jsex/jsex';
     MyApp,
     HomePage,
     DemoPage,
+    Demo2Page,
     JsexPage
   ],
   providers: [
@@ -35,7 +39,7 @@ import { JsexPage } from '../pages/jsex/jsex';
     // SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     Diagnostic,
-    ArengineServiceProvider
+    ArengineServiceProvider,
   ]
 })
 export class AppModule { }
