@@ -143,12 +143,6 @@ export class ArengineServiceProvider {
     });
     renderer.setClearColor(new Color('lightgrey'), 0);
     console.log("orientation", arController.orientation);
-    // let f = Math.min(
-    //   window.innerWidth / arScene.video.videoWidth,
-    //   window.innerHeight / arScene.video.videoHeight
-    // );
-    // const w = f * arScene.video.videoWidth;
-    // const h = f * arScene.video.videoHeight;
     const w = width;
     const h = height;
     
@@ -201,7 +195,7 @@ export class ArengineServiceProvider {
       //     this.trackMarker(arScene, arController, 5, object);
       // });
       // this.trackMarker(arScene, arController, 5, icosahedron);
-      // this.trackMarker(arScene, arController, 20, torus);
+      this.trackMarker(arScene, arController, 20, torus);
       this.trackManualMarker(arScene, arController, 5, icosahedron);
 
       let stop = false;
