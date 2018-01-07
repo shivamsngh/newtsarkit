@@ -8,6 +8,8 @@ To install dependecies after cloning
 $ npm install
 ```
 
+## DOM Manipulation from services(although I am passing dom manipulators from components), do not imitate this :)
+
 Then, to run it, cd into `new-ts-arkit` and run:
 
 ```bash
