@@ -190,13 +190,13 @@ export class ArengineServiceProvider {
 
       const icosahedron = this.createIcosahedron();
       const torus = this.createTorus();
-      // this.createAvatar((object) => {
-      //     console.log("Callback returned", object);
-      //     this.trackMarker(arScene, arController, 5, object);
-      // });
+      this.createAvatar((object) => {
+          console.log("Callback returned", object);
+          this.trackManualMarker(arScene, arController, 5, object);
+      });
       // this.trackMarker(arScene, arController, 5, icosahedron);
-      this.trackMarker(arScene, arController, 20, torus);
-      this.trackManualMarker(arScene, arController, 5, icosahedron);
+      // this.trackMarker(arScene, arController, 20, torus);
+      // this.trackManualMarker(arScene, arController, 5, icosahedron);
 
       let stop = false;
       let frameCount = 0;
